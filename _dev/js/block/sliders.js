@@ -15,7 +15,7 @@ function initService() {
   let pagination = $(".service .pagination-icon");
   // pagination.eq(0).removeClass("swiper-pagination-bullet-active");
   // tlService.from(pagination, {stagger: 1})
-  Service.autoplay.stop();
+  // Service.autoplay.stop();
   pagination.each(function () {
     let el = $(this).find(".pagination-icon__wrap");
     let timer = $(this).find(".pagination-icon__timer");
@@ -23,11 +23,19 @@ function initService() {
       .from(el, { opacity: 0, duration: 0.5 })
       .to(el, { scale: 1.1, duration: 0.5 }, "-=.5")
       .to(el, { scale: 1, duration: 0.5 })
-      .from(timer, { scaleX: 0, duration: 0.5, transformOrigin: "left" });
+      .from(timer, {
+        scaleX: 0,
+        duration: 0.5,
+        transformOrigin: "left",
+        onComplete: () => {
+          setDelay(Service);
+          Service.slideReset(0);
+          Service.autoplay.start();
+        }
+        });
   });
-  Service.autoplay.start();
-  setDelay(Service);
-  slideAnim();
+
+  // slideAnim();
   // Service.autoplay.start();
 }
 
@@ -58,6 +66,7 @@ function slideAnim() {
 Swiper.use([Pagination, EffectFade, Autoplay]);
 
 const setDelay = (slider) => {
+  console.log("sett");
   const delay = slider.params.autoplay.delay;
   if (delay) {
     let elem = $(slider.$el).find(".pagination-icon__timer");
@@ -103,6 +112,7 @@ const Service = new Swiper(".js-service-slider", {
 });
 
 Service.init();
+Service.autoplay.stop();
 
 Service.on("init", function () {
   setDelay(Service);
@@ -110,6 +120,7 @@ Service.on("init", function () {
 });
 
 Service.on("slideChange", function () {
+  console.log("pre");
   showProgress(Service);
 });
 
@@ -127,7 +138,7 @@ Service.on("slideChangeTransitionStart", function () {
 // });
 
 ScrollTrigger.create({
-  trigger: "service",
+  trigger: ".service",
   markers: true,
   start: "top center",
   onEnter: () => initService(),
