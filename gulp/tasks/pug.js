@@ -18,8 +18,8 @@ const renderHtml = (onlyChanged) =>
     .pipe(
       gulpif(onlyChanged, changed(config.dest.html, { extension: ".html" }))
     )
-    .pipe(replace(new RegExp("(../){2,}", "g"), "../"))
-    // .pipe(replace("../", "./"))
+    // .pipe(replace(new RegExp("(../){2,}", "g"), "../"))
+    .pipe(replace("../../", "../"))
     .pipe(
       pug({
         i18n: {

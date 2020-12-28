@@ -1,6 +1,7 @@
 # Folders to ignore
 .sass-cache
 .tmp
+.map
 _tmp
 node_modules
 bower_components
