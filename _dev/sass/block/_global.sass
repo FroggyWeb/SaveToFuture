@@ -1,0 +1,76 @@
+*
+  box-sizing: border-box
+  min-width: 0
+  min-height: 0
+
+body
+  background: $c-main
+
+img
+  max-width: 100%
+
+.container
+  max-width: 1180px
+  margin: auto
+  padding: 0 10px
+
+.section
+  &--full
+    min-height: 100vh
+    padding: 120px 0 40px
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &__footer
+    margin-top: 80px
+    text-align: center
+
+.btn
+  display: inline-flex
+  align-items:center
+  line-height: 1
+  font-size: 14px
+  text-transform: uppercase
+  white-space: nowrap
+  border: none
+  text-decoration: none
+  background-color: $c-brand
+  padding: 1.1em 1.8em 0.8em
+  color: #fff
+  border-radius: .2em
+  .ico
+    font-size: 9px
+    margin: 1px 0  0 12px
+    line-height: 0
+
+.title-section
+  font-weight: normal
+  font-size: 26px
+  text-align: center
+  margin-bottom: 120px
+
+.subtitle-section
+  display: block
+  text-align: center
+  font-size: .8em
+  color: $c-sec
+  font-weight: normal
+  margin-top: 1em
+
+.header-page
+  position: fixed
+  width: 100%
+  z-index: 100
+  padding: 40px 0
+  border-bottom: 1px solid #4e5768
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .menu__item
+      +r(sm)
+        padding: 0 20px
+  &__side
+    display: flex
+    align-items: center
+

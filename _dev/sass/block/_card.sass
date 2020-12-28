@@ -1,0 +1,110 @@
+.separator
+  display: block
+  margin:  45px 0
+  width: 120px
+  height: 2px
+  background-color: #fff
+
+.intro
+  &__wrap
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 40px
+    align-items: center
+  &__img
+    justify-self: end
+    img
+      width: 400px
+  &__title
+    font-size: 32px
+    line-height: 1.2
+    font-weight: normal
+    margin: 0 0 1.2em
+  &__txt
+    color: $c-sec
+    font-size: 20px
+    margin-bottom: 90px
+
+.card
+  display: grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 100px
+  align-items: center
+  &__img
+    justify-self: center
+    img
+      width: 400px
+  &__title
+    font-size: 22px
+    margin: 0 0 2em
+    line-height: 1.2
+  &__txt
+    font-weight: 300
+    color: $c-sec
+    font-size: 20px
+  &__txt-list
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      padding-left: 30px
+      margin-bottom: 20px
+      position: relative
+      &:before
+        content: ""
+        display: block
+        position: absolute
+        top: .5em
+        left: 0
+        margin-right: 20px
+        width: .5em
+        height: .5em
+        border-radius: 50%
+        background-color: $c-sec
+        vertical-align: middle
+
+.counter
+  font-size: 30px
+  font-weight: 100
+  color: #fff
+  margin-bottom: 1em
+
+.card-list
+  .card
+    margin-bottom: 200px
+  +r(sm)
+    .card:nth-child(even)
+      .card__img
+        order: -1
+
+.service .card
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 0 100px
+  .card__img
+    grid-row: span 2
+  .card__title-wrap
+    align-self: end
+  .card__txt-list
+    align-self: start
+
+.cases
+  counter-reset: cases
+  .card
+    counter-increment: cases
+
+.cases .counter:before
+  content: "0" counter(cases)
+
+.work-list
+  &__item
+    max-width: 540px
+    +r(sm)
+      &:nth-child(even)
+        margin-left: auto
+  &__txt
+    font-size: 20px
+    padding: 20px 0 140px 80px
+  &__img
+    margin: 20px
+    max-width: 70%

@@ -1,0 +1,38 @@
+//разные отступы для медиазапросов
+@mixin grid-row($gutter: $l-g) {
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+
+@function col-w($span) {
+  @return percentage($span);
+}
+
+@mixin col($span, $gutter: $l-g) {
+  flex: 0 0 auto;
+  flex-basis: calc(#{percentage($span)} - #{2 * $gutter});
+  margin-left: $l-g;
+  margin-right: $l-g;
+}
+
+%row {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include grid-row();
+}
+
+%m-col {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+//short call grid
+@mixin row($gutter: $l-g) {
+  @extend %row;
+}
+
+@mixin mc() {
+  @extend %m-col;
+}

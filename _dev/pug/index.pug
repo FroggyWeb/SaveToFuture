@@ -1,0 +1,77 @@
+extend ./part/_base
+block var
+  - var current = $i18n.glob.nav.company.link[0].name;
+  - var title = $i18n.index.meta.title;
+  - var desc = $i18n.index.meta.desc;
+
+block content
+  section.b-section.--full
+    .b-intro
+      .container
+        .__wrap
+          .__cnt
+            h1.__title= $i18n.index.intro.title
+            span.separator
+            .__txt
+              p= $i18n.index.intro.txt
+            a(href="#").b-btn= $i18n.index.intro.button
+              +svgMono("arrow-right")
+          .__img
+            img(src="../img/content/data-icon.png", alt="")
+
+    //- img(src="../../img/svg-sprite/play.svg", alt="")
+  section.b-section.--full
+    .b-service
+      .container
+        h2.title-section= $i18n.index.service.title
+        .b-slider.swiper-container.js-service-slider
+          .swiper-pagination
+          .swiper-wrapper
+            -var slider= $i18n.index.service.slider
+            each slide in slider
+              .b-card.swiper-slide
+                .__img
+                  img(src="../img/content/data-icon.png", alt= slide.title)
+                .__title-wrap
+                  h3.__title= slide.title
+                  span.separator
+                if slide.cnt.length == 1
+                  .__txt-list
+                    .__txt=  slide.cnt
+                else
+                  ul.__txt-list
+                    each txt in slide.cnt
+                      li.__txt=  txt
+    footer.__footer
+      .container
+        .btn-wrap
+          a(href="").b-btn.--outline= $i18n.index.service.btn
+
+  section.b-section.--full
+    .b-cases
+      .container
+        h2.title-section= $i18n.index.cases.title
+          span.subtitle-section= $i18n.index.cases.subtitle
+        .card-list
+          each item in $i18n.index.cases.block
+            .b-card
+              .__cnt
+                .counter
+                h3.__title= item.title
+                  span.separator
+                .__txt= item.text
+              .__img
+                img(src="../img/content/data-icon.png", alt= item.title)
+
+  section.b-section.--full
+    .b-work
+      .container
+        h2.title-section= $i18n.index.work.title
+        .b-work
+          each item in $i18n.index.work.block
+            .__item
+              .__txt= item.txt
+              .__img
+                img(src="../img/content/data-icon.png", alt="")
+
+//- Content page_______________________________________

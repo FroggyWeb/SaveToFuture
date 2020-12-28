@@ -1,0 +1,20 @@
+.b-header-page
+  .container.__wrap
+    .b-logo.__logo
+      a(href="/").__link
+        img(src="../../img/logo.svg", alt="SaveToFuture").__img
+    nav.nav.__nav
+      -
+        var menudata = $i18n.glob.nav.company.link
+      +menu()
+
+    .__side
+      .b-lang-swith
+        .__control
+          span.__lang= $i18n.glob.lang.current
+          +svgMono("world")
+
+      .__member
+        a(href="").b-btn.--light SIGN IN
+
+    .burger

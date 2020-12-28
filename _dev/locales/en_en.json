@@ -1,0 +1,119 @@
+{
+  "glob": {
+    "lang": {
+      "current": "en",
+      "list": ["en", "ru"]
+    },
+    "copy": "SaveToFuture 2020. All rights reserved",
+    "nav": {
+      "legal": {
+        "title": "Legal",
+        "link": [
+          { "name": "Terms & Conditions", "url": "terms.html" },
+          { "name": "Privacy Policy", "url": "privacy.html" },
+          { "name": "Disclaimer", "url": "disclaimer.html" },
+          { "name": "Cookies Policy", "url": "Cookies.html" }
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "link": [
+          { "name": "About us", "url": "index.html#about" },
+          { "name": "Pricing", "url": "pricing.html" },
+          { "name": "How it works?", "url": "index.html#works" },
+          { "name": "Use cases", "url": "index.html#cases" },
+          { "name": "FAQ", "url": "faq.html" }
+        ]
+      }
+    }
+  },
+  "index": {
+    "meta": {
+      "title": "Main page",
+      "desc": "Описание страницы главная"
+    },
+    "intro": {
+      "title": "Deliver your data to the future safely and securely",
+      "txt": "More encrypted than cloud storage",
+      "button": "Get started"
+    },
+    "service": {
+      "title": "What is the SaveToFuture service?",
+      "slider": [
+        {
+          "title": "Secure data storage in encrypted secure capsules",
+          "cnt": [
+            "Unable to decipher",
+            "Impossible to change",
+            "Unable to delete"
+          ]
+        },
+        {
+          "title": "Слайд еще какой-то",
+          "cnt": ["Просто текст"]
+        },
+        {
+          "title": "Слайд еще какой-то 3",
+          "cnt": ["Просто текст"]
+        },
+        {
+          "title": "Слайд еще какой-то 4",
+          "cnt": ["Unable to decipher", "Impossible to change"]
+        }
+      ],
+      "btn": "Get started"
+    },
+    "cases": {
+      "title": "Use cases",
+      "subtitle": "Why do you need the SaveToFuture service?",
+      "block": [
+        {
+          "title": "Handover logins and passwords",
+          "text": "Transferring over to a relatives or trusted persons the logins and passwrods to your accounts, which you wish to share with him/them in case of your death, missing, disability, or other reasons"
+        },
+        {
+          "title": "Passing on important information to your heirs",
+          "text": "You have a confdential informatio that you want your heirs to recieve in the event of your death, or disadility. You want your heirs to be sent the information itself, or the way how to gain access to such information. "
+        },
+        {
+          "title": "Protection against threats from third parties, for cases of disability and missing",
+          "text": "Sending a document (s), and / or a photo (s), or a video message to an addressee (s) in case something happened with you. You cannot allow any of these documents/photos/videos be discolured with anyone in the world ahead of time."
+        },
+        {
+          "title": "Physical delivery of confidential information",
+          "text": "Applies to either case, however you are not sure if the recipient's email / telegram / whatsapp / etc. will still be available when the timer is activated. Or you don't know the email contacts of the recipients. In these cases, you can select the delivery files extracted from the secure capsule to the addressee via courier service (DHL, FedEx, UPS)."
+        }
+      ],
+      "footer": "There are many other cases for which the SaveToFuture service is essential",
+      "button": "MORE USE CASES"
+    },
+    "work": {
+      "title": "How it works?",
+      "block": [
+        {
+          "txt": "Create a secure capsule and put the files you want to close securely in it"
+        },
+        {
+          "txt": "Set the capsule storage period and the event by which the capsule will be opened in the future. The storage period can be from 1 month to 50 years"
+        },
+        {
+          "txt": "Set the list of destinations to which files are to be sent. Or other ways to manipulate materials"
+        },
+        {
+          "txt": "SaveToFuture keeps your files completely encrypted  so that no one can decrypt them"
+        },
+        {
+          "txt": "SaveToFuture will track exactly the occurrence of the event you configured"
+        },
+        {
+          "txt": "SaveToFuture will extract your files and send them to the addressees in their original form according to your instructions"
+        }
+      ]
+    },
+    "use": {
+      "title": "Deliver your data to the future safely and securely",
+      "txt": "More encrypted than cloud storage",
+      "button": "Get started"
+    }
+  }
+}

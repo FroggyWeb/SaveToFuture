@@ -1,0 +1,54 @@
+$breakpoints: (
+  "xs": 360px,
+  "sm": 540px,
+  "md": 767px,
+  "lg": 992px,
+  "xl": 1200px,
+  "xxl": 1400px,
+) !default;
+
+$f-base: 16px/1.4 "Roboto", sans-serif;
+// $f-title: "Philosopher", serif;
+$f-color: #fff;
+
+$l-g: 15px;
+$lg: $l-g;
+
+$c-main: #2e3542;
+$c-brand: #e41139;
+$c-sec: #9c9ea3;
+$c-text: #fff;
+$c-link: inherit;
+$c-active: inherit;
+
+// bootstrap setup
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$container-max-widths: (
+  xxl: 1400px,
+);
+
+@include font(
+  "Roboto",
+  "subset-Roboto-BoldItalic",
+  bold,
+  italic,
+  "Roboto Bold Italic"
+);
+@include font("Roboto", "subset-Roboto-Thin", 100, "Roboto Thin");
+@include font("Roboto", "subset-Roboto-Light", 300, "Roboto Thin");
+@include font("Roboto", "subset-Roboto-Italic", normal, italic, "Roboto Bold");
+@include font("Roboto", "subset-Roboto-Regular", normal, "Roboto Regular");
+@include font("Roboto", "subset-Roboto-Bold", bold, "Roboto Italic");
+// @include font("Philosopher", "philosopher-bold-webfont", 700 );
+// @include font("PT Sans", "pt_sans-web-regular-webfont", 400);
+// @include font("PT Sans", "pt_sans-web-italic-webfont", 400 , italic);
+// @include font("PT Sans", "pt_sans-web-bolditalic-webfont", 700, italic);
+// @include font("PT Sans", "pt_sans-web-bold-webfont", 700);
