@@ -27,15 +27,22 @@ function initService() {
         scaleX: 0,
         duration: 0.5,
         transformOrigin: "left",
-        onComplete: () => {
-          setDelay(Service);
-          Service.slideReset(0);
-          Service.autoplay.start();
-        }
-        });
+      })
+
   });
 
-  // slideAnim();
+  tlService.from(".service .card", {
+    onComplete: () => {
+      console.log("event");
+      // slideAnim();
+      setDelay(Service);
+      Service.slideReset(0);
+      Service.autoplay.start();
+      showProgress(Service);
+    },
+  });
+
+  slideAnim();
   // Service.autoplay.start();
 }
 
@@ -120,7 +127,6 @@ Service.on("init", function () {
 });
 
 Service.on("slideChange", function () {
-  console.log("pre");
   showProgress(Service);
 });
 
@@ -142,5 +148,5 @@ ScrollTrigger.create({
   markers: true,
   start: "top center",
   onEnter: () => initService(),
-  // onEnterBack: () => goToSection(section),
+  onLeaveBack: self => self.disable(),
 });

@@ -64,13 +64,16 @@ block content
                 img(src="../img/content/data-icon.png", alt= item.title)
 
   section.b-section.--full
+    svg(id="svg-work-line", version="1.1", xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink")
     .b-work
       .container
         h2.title-section= $i18n.index.work.title
-        .b-work
+        .b-work-list
           each item in $i18n.index.work.block
             .__item
-              .__txt= item.txt
+              .__txt-wrap
+                .__txt= item.txt
+                .__counter
               .__img
                 img(src="../img/content/data-icon.png", alt="")
 
