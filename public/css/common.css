@@ -742,18 +742,32 @@ button.swiper-pagination-bullet {
   content: "0" counter(cases);
 }
 
+.work__wrap {
+  background: url("../img/workline-lg.svg") top center no-repeat;
+}
+
 .work-list {
   counter-reset: work;
 }
 
 .work-list__item {
-  max-width: 540px;
+  width: 360px;
   counter-increment: work;
 }
 
-@media (min-width: 540px) {
-  .work-list__item:nth-child(even) {
-    margin-left: auto;
+.work-list__item:nth-child(even) {
+  margin-left: auto;
+}
+
+@media (min-width: 767px) {
+  .work-list__item {
+    width: 460px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .work-list__item {
+    width: 540px;
   }
 }
 
@@ -762,9 +776,16 @@ button.swiper-pagination-bullet {
 }
 
 .work-list__txt {
-  font-size: 20px;
   font-weight: 100;
-  padding: 20px 0 100px 80px;
+  height: 180px;
+  padding: 20px 20px 20px 80px;
+  font-size: 18px;
+}
+
+@media (min-width: 992px) {
+  .work-list__txt {
+    font-size: 20px;
+  }
 }
 
 .work-list__counter {
@@ -790,20 +811,6 @@ button.swiper-pagination-bullet {
   max-width: 70%;
 }
 
-#svg-work-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#svg-work-line path {
-  fill: transparent;
-  stroke: #fff;
-  stroke-width: 3px;
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -826,7 +833,7 @@ img {
 .container {
   max-width: 1180px;
   margin: auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .section--full {

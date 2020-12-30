@@ -5,9 +5,10 @@ const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
 // Use path.setAttribute("<attr>", "<value>"); to set any attributes you want
 
 let pathElement = svg.appendChild(path);
-let elems = document.querySelectorAll(".work-list__counter");
+let elems = $(".work-list__counter");
 
 function pathCalc (elStart, elEnd) {
+  console.log(elEnd)
   elStart = elStart.getBoundingClientRect();
   elEnd = elEnd.getBoundingClientRect();
   let x1 = elStart.left,
