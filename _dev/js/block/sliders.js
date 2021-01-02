@@ -27,13 +27,11 @@ function initService() {
         scaleX: 0,
         duration: 0.5,
         transformOrigin: "left",
-      })
-
+      });
   });
 
   tlService.from(".service .card", {
     onComplete: () => {
-      console.log("event");
       // slideAnim();
       setDelay(Service);
       Service.slideReset(0);
@@ -145,8 +143,8 @@ Service.on("slideChangeTransitionStart", function () {
 
 ScrollTrigger.create({
   trigger: ".service",
-  markers: true,
+  // markers: true,
   start: "top center",
   onEnter: () => initService(),
-  onLeaveBack: self => self.disable(),
+  onLeaveBack: (self) => self.disable(),
 });

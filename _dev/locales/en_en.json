@@ -4,9 +4,19 @@
       "current": "en",
       "list": ["en", "ru"]
     },
-    "copy": "SaveToFuture 2020. All rights reserved",
+    "contacts": {
+      "title": "Contacts",
+      "mail": "1111@gmail.com",
+      "tel": "+ 000 00 000 000",
+      "post": "242733, Ryazan region, G. Spas-Klepiki, st. Kuibyshev, 42-22"
+    },
+    "soc": {
+      "twitter": "https:/",
+      "facebook": "https:/",
+      "youtube": "https:/"
+    },
     "nav": {
-      "legal": {
+      "Legal": {
         "title": "Legal",
         "link": [
           { "name": "Terms & Conditions", "url": "terms.html" },

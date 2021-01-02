@@ -1,0 +1,31 @@
+footer.b-footer-page
+  .container
+    .__wrap
+      .__logo
+        a(href="/" )
+          img(src="../../img/logo.svg", alt="SaveToFuture")
+      .__aside
+        each menu, key in $i18n.glob.nav
+          .__naw-wrap
+            h3.footer-title= menu.title
+            -
+              var menufooter = menu.link
+            +menu(menufooter, "menu--footer")
+
+        .__contact
+          h3.footer-title= $i18n.glob.contacts.title
+          p
+            a(href="mailTo: #{$i18n.glob.contacts.mail}")= $i18n.glob.contacts.mail
+          p
+            a(href="tel: #{$i18n.glob.contacts.tel}")= $i18n.glob.contacts.tel
+          p= $i18n.glob.contacts.post
+
+      .__soc
+        .b-soc
+          a(href=" #{$i18n.glob.soc.twitter}").__link
+            +svgMono("soc-tw")
+          a(href=" #{$i18n.glob.soc.facebook}").__link
+            +svgMono("soc-fb")
+          a(href=" #{$i18n.glob.soc.youtube}").__link
+            +svgMono("soc-youtube")
+        .copyright 	&copy; SaveToFuture <span id="copy-year">2020</span>. All rights reserved

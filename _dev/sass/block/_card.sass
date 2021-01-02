@@ -4,26 +4,41 @@
   width: 120px
   height: 2px
   background-color: #fff
+  +rmax(sm)
+    margin: 30px auto
 
 .intro
   &__wrap
     display: grid
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
     grid-gap: 40px
     align-items: center
+    +rmax(sm)
+      text-align: center
+      justify-items: center
   &__img
-    justify-self: end
+    +r(sm)
+      justify-self: end
+    +rmax(sm)
+      order: -1
     img
       width: 400px
+      +rmax(sm)
+        max-width: 70%
+        margin: auto
   &__title
-    font-size: 32px
     line-height: 1.2
     font-weight: normal
     margin: 0 0 1.2em
+    font-size: 20px
+    +r(sm)
+      font-size: 32px
   &__txt
     color: $c-sec
-    font-size: 20px
     margin-bottom: 90px
+    font-size: 16px
+    +r(sm)
+      font-size: 20px
 
 .card
   display: grid
@@ -62,6 +77,8 @@
         border-radius: 50%
         background-color: $c-sec
         vertical-align: middle
+  &__btn
+    margin-top: 80px
 
 .counter
   font-size: 30px
@@ -92,6 +109,14 @@
   counter-reset: cases
   .card
     counter-increment: cases
+  &__footer
+    text-align: center
+    font-weight: 300
+    font-size: 20px
+    margin: auto
+    max-width: 540px
+    &-txt
+      margin-bottom: 40px
 
 .cases .counter:before
   content: "0" counter(cases)

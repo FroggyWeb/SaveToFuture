@@ -14,7 +14,7 @@ block content
             span.separator
             .__txt
               p= $i18n.index.intro.txt
-            a(href="#").b-btn= $i18n.index.intro.button
+            a(href="#").b-btn.--fill= $i18n.index.intro.button
               +svgMono("arrow-right")
           .__img
             img(src="../img/content/data-icon.png", alt="")
@@ -62,6 +62,9 @@ block content
                 .__txt= item.text
               .__img
                 img(src="../img/content/data-icon.png", alt= item.title)
+        footer.__footer
+          .__footer-txt= $i18n.index.cases.footer
+          a(href="").b-btn.--outline= $i18n.index.cases.button
 
   section.b-section.--full
     .b-work
@@ -77,4 +80,15 @@ block content
                 .__img
                   img(src="../img/content/data-icon.png", alt="")
 
+  section.b-section.--full
+    .container
+      .b-card
+        .__cnt
+          .__title-wrap
+            h3.__title= $i18n.index.use.title
+            span.separator
+          .__txt= $i18n.index.use.txt
+          .b-btn.--fill.__btn= $i18n.index.use.button
+        .__img
+          img(src="../img/content/data-icon.png", alt="")
 //- Content page_______________________________________

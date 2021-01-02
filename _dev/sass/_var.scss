@@ -1,7 +1,7 @@
 $breakpoints: (
   "xs": 360px,
   "sm": 540px,
-  "md": 767px,
+  "md": 768px,
   "lg": 992px,
   "xl": 1200px,
   "xxl": 1400px,
@@ -19,7 +19,7 @@ $c-brand: #e41139;
 $c-sec: #9c9ea3;
 $c-text: #fff;
 $c-link: inherit;
-$c-active: inherit;
+$c-active: $c-brand;
 
 // bootstrap setup
 $grid-breakpoints: (

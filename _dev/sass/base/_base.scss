@@ -29,6 +29,7 @@ img {
 
 a {
   color: $c-link;
+  transition: color 0.2s;
   &:hover {
     color: $c-active;
   }

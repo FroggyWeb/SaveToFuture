@@ -29,6 +29,7 @@ img
     text-align: center
 
 .btn
+  cursor: pointer
   display: inline-flex
   align-items:center
   line-height: 1
@@ -37,20 +38,41 @@ img
   white-space: nowrap
   border: none
   text-decoration: none
-  background-color: $c-brand
-  padding: 1.1em 1.8em 0.8em
+  padding: 1.1em 1.8em
   color: #fff
   border-radius: .2em
+  transition: all .2s
   .ico
     font-size: 9px
     margin: 1px 0  0 12px
     line-height: 0
+  &--fill
+    background-color: #E41139
+    &:hover
+      color: #fff
+      background-color: #D3002F
+      box-shadow: 0 2px 12px rgba(#000, .5)
+    &:active
+      background-color: #E34C6E
+
+  &--outline
+    background-color: transparent
+    color: $c-brand
+    border: 1px solid $c-brand
+    &:hover
+      color: $c-brand
+      background-color: rgba(#000, .2)
+    &:active
+      background-color: rgba(#000, .4)
 
 .title-section
   font-weight: normal
-  font-size: 26px
   text-align: center
-  margin-bottom: 120px
+  font-size: 20px
+  margin-bottom: 2em
+  +r(sm)
+    margin-bottom: 120px
+    font-size: 26px
 
 .subtitle-section
   display: block
@@ -60,20 +82,24 @@ img
   font-weight: normal
   margin-top: 1em
 
-.header-page
-  position: fixed
-  width: 100%
-  z-index: 100
-  padding: 40px 0
-  border-bottom: 1px solid #4e5768
-  &__wrap
-    display: flex
-    justify-content: space-between
-    align-items: center
-    .menu__item
-      +r(sm)
-        padding: 0 20px
-  &__side
-    display: flex
-    align-items: center
+.soc
+  margin-bottom: 40px
+  &__link
+    display: inline-block
+    width: 56px
+    height: 56px
+    line-height: 58px
+    font-size: 24px
+    text-align: center
+    border: 1px solid
+    border-radius: 50%
+    &:not(:last-child)
+      margin-right: 20px
+    &:hover
+      color: #fff
+      background-color: rgba(#fff, .3)
+    &:active
+      background-color: rgba(#fff, .5)
 
+.copyright
+  font-weight: normal
