@@ -125,5 +125,58 @@
       "txt": "More encrypted than cloud storage",
       "button": "Get started"
     }
+  },
+
+  "pricing": {
+    "meta": {
+      "title": "Main page",
+      "desc": "Описание страницы главная"
+    },
+    "price": {
+      "title": "Pricing",
+      "subtitle": "Price for secure capsule is based on total size of files that you want to close in it",
+      "period": "Month",
+      "currency": "$",
+      "card": [
+        {
+          "cost": "10.5",
+          "vol": "Less than 25 Mb"
+        },
+        {
+          "cost": "10.5",
+          "vol": "From 25 to 100 Mb"
+        },
+        {
+          "cost": "30.25",
+          "vol": "From 100 to 1000 Mb"
+        }
+      ]
+    },
+    "reduction": {
+      "title": "Price reduction",
+      "subtitle": "Price discount is based on secure capsule storage duration"
+    },
+    "discounts": [
+      {
+        "title": "From 1 to 2 years",
+        "procentage": "10%",
+        "length": "25%"
+      },
+      {
+        "title": "From 2 to 5 years",
+        "procentage": "20%",
+        "length": "50%"
+      },
+      {
+        "title": "From 5 to 15 years",
+        "procentage": "30%",
+        "length": "75%"
+      },
+      {
+        "title": "More than 15 years",
+        "procentage": "40%",
+        "length": "100%"
+      }
+    ]
   }
 }

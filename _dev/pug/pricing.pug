@@ -1,0 +1,29 @@
+extend ./part/_base
+block var
+  - var current= $i18n.glob.nav.company.link[1].name;
+  - var title= $i18n.pricing.meta.title;
+  - var desc= $i18n.pricing.meta.desc;
+
+block content
+  section.b-section.--full
+    .b-pricing.section
+      .container
+        .h1.title-section= $i18n.pricing.price.title
+          span.subtitle-section= $i18n.pricing.price.subtitle
+        .b-price-carts
+           each card, index in $i18n.pricing.price.card
+            .b-price-cart
+              .__img
+                img(src="../img/pricing-card-" + index + ".svg", alt="")
+              .__cost= $i18n.pricing.price.currency
+                span= card.cost + " / "
+                span.__small= $i18n.pricing.price.period
+              .__footer= card.vol
+    .b-pricing.section
+      .container
+        .h2.title-section= $i18n.pricing.reduction.title
+          span.subtitle-section= $i18n.pricing.reduction.subtitle
+
+//- Content page_______________________________________
+block scripts
+  script(src='../js/pricing.js')

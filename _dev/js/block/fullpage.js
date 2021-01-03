@@ -19,14 +19,14 @@ function goToSection(section, anim) {
 
 sections.forEach((section) => {
   const intoAnim = gsap.timeline({ paused: true });
-  let title = section.querySelector(".title-section");
-  if (title) {
-    intoAnim.from(title, {
-      opacity: 0,
-      delay: 1,
-      duration: 1,
-    });
-  }
+  // let title = section.querySelector(".title-section");
+  // if (title) {
+  //   intoAnim.from(title, {
+  //     opacity: 0,
+  //     delay: 1,
+  //     duration: 1,
+  //   });
+  // }
 
   ScrollTrigger.create({
     // markers: true,

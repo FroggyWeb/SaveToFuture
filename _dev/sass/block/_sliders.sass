@@ -8,8 +8,15 @@
     display: flex
     align-items: center
     justify-content: center
-    margin-bottom: 120px
     bottom: 0
+    margin-bottom: 40px
+    // margin: 0 -20px 40px
+    +r(sm)
+      margin-bottom: 80px
+    +r(lg)
+      margin-bottom: 120px
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+    margin: 0
   .pagination-icon:nth-child(1) .pagination-icon__wrap:before
     background-image: url('../../img/ico/service-ico-1.svg')
   .pagination-icon:nth-child(2) .pagination-icon__wrap:before
@@ -25,18 +32,24 @@
     border-radius: 0
     opacity: 1
     background: transparent
-    flex: 2 1 auto
+    flex: 1.25 1 auto
     display: flex
     align-items: center
+    +r(xs)
+      flex: 2 1
     &:last-child
-      flex: 1 1
+      flex: 1 0 auto
       .pagination-icon__timer
         display: none
     &__wrap
-      max-width: 120px
-      min-width: 40px
       position: relative
-      flex: 2 1
+      flex: 0 0 50px
+      +r(xs)
+        flex: 0 0 60px
+      +r(sm)
+        flex: 0 0 80px
+      +r(lg)
+        flex: 0 0 120px
       &:before
         content: ""
         position: absolute
@@ -52,11 +65,15 @@
       height: 6px
       flex: 1 1
       background-color: #fff
-      margin: 0 30px
       border-radius: 2px
       background: linear-gradient(to right, $c-brand 50%,#fff 50%) no-repeat
       background-size: 200% auto
       background-position-x: 101%
+      margin: 0 5px
+      +r(sm)
+        margin: 0 20px
+      +r(lg)
+        margin: 0 30px
 
 .process .swiper-pagination-bullet-active .pagination-icon__timer
   animation-name: progress-time
@@ -68,7 +85,6 @@
 
 .svg-st-in
   transition: all .2s
-
 
 .swiper-pagination-bullet-active
   .pagination-icon__wrap

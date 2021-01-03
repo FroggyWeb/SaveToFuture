@@ -18,9 +18,9 @@ img
   padding: 0 20px
 
 .section
+  padding: 120px 0
   &--full
     min-height: 100vh
-    padding: 120px 0 40px
     display: flex
     flex-direction: column
     justify-content: center
@@ -66,10 +66,10 @@ img
       background-color: rgba(#000, .4)
 
 .title-section
-  font-weight: normal
+  font-weight: bold
   text-align: center
   font-size: 20px
-  margin-bottom: 2em
+  margin-bottom: 4em
   +r(sm)
     margin-bottom: 120px
     font-size: 26px
@@ -80,7 +80,8 @@ img
   font-size: .8em
   color: $c-sec
   font-weight: normal
-  margin-top: 1em
+  margin: 1em auto 0
+  max-width: 460px
 
 .soc
   margin-bottom: 40px
@@ -100,6 +101,3 @@ img
       background-color: rgba(#fff, .3)
     &:active
       background-color: rgba(#fff, .5)
-
-.copyright
-  font-weight: normal

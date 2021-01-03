@@ -1,18 +1,20 @@
-import config from './config';
-import webpack from 'webpack';
+import config from "./config";
+import webpack from "webpack";
 
 const path = require("path");
 
 module.exports = {
-  mode: config.production ? 'production' : 'development',
+  mode: config.production ? "production" : "development",
   entry: {
-    main: './' + config.src.js + '/index.js',
+    main: "./" + config.src.js + "/main.js",
+    index: "./" + config.src.js + "/index.js",
+    pricing: "./" + config.src.js + "/pricing.js",
   },
 
   output: {
     filename: "[name].js",
     chunkFilename: "[name].js",
-    publicPath: "/"
+    publicPath: "/",
   },
 
   // optimization: {
@@ -36,26 +38,24 @@ module.exports = {
         use: {
           loader: "babel-loader",
           query: {
-            presets: [
-              ["@babel/preset-env", { modules: false }]
-            ]
-          }
-        }
-      }
-    ]
+            presets: [["@babel/preset-env", { modules: false }]],
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      'window.$': 'jquery'
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+      "window.$": "jquery",
     }),
   ],
 
   resolve: {
     alias: {
-      "%components%": path.resolve(__dirname, "_dev/components")
-    }
-  }
+      "%components%": path.resolve(__dirname, "_dev/components"),
+    },
+  },
 };

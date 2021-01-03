@@ -9,15 +9,16 @@ block content
     .b-intro
       .container
         .__wrap
-          .__cnt
-            h1.__title= $i18n.index.intro.title
-            span.separator
-            .__txt
-              p= $i18n.index.intro.txt
-            a(href="#").b-btn.--fill= $i18n.index.intro.button
-              +svgMono("arrow-right")
-          .__img
-            img(src="../img/content/data-icon.png", alt="")
+          .b-card
+            .__cnt
+              h1.__title= $i18n.index.intro.title
+              span.separator
+              .__txt
+                p= $i18n.index.intro.txt
+              a(href="#").b-btn.--fill.__btn= $i18n.index.intro.button
+                +svgMono("arrow-right")
+            .__img
+              img(src="../img/content/data-icon.png", alt="")
 
     //- img(src="../../img/svg-sprite/play.svg", alt="")
   section.b-section.--full
@@ -42,10 +43,9 @@ block content
                   ul.__txt-list
                     each txt in slide.cnt
                       li.__txt=  txt
-    footer.__footer
-      .container
-        .btn-wrap
-          a(href="").b-btn.--outline= $i18n.index.service.btn
+        footer.b-section-footer
+          .btn-wrap
+            a(href="").b-btn.--outline= $i18n.index.service.btn
 
   section.b-section.--full
     .b-cases
@@ -56,14 +56,14 @@ block content
           each item in $i18n.index.cases.block
             .b-card
               .__cnt
-                .counter
+                .cases__counter
                 h3.__title= item.title
                   span.separator
                 .__txt= item.text
               .__img
                 img(src="../img/content/data-icon.png", alt= item.title)
-        footer.__footer
-          .__footer-txt= $i18n.index.cases.footer
+        footer.b-section-footer
+          .__txt= $i18n.index.cases.footer
           a(href="").b-btn.--outline= $i18n.index.cases.button
 
   section.b-section.--full
@@ -77,6 +77,7 @@ block content
                 .__txt-wrap
                   .__txt= item.txt
                   .__counter
+                  .__border
                 .__img
                   img(src="../img/content/data-icon.png", alt="")
 
@@ -92,3 +93,5 @@ block content
         .__img
           img(src="../img/content/data-icon.png", alt="")
 //- Content page_______________________________________
+block scripts
+  script(src='../js/index.js')

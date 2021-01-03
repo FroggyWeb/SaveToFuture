@@ -7,15 +7,28 @@
   +rmax(sm)
     margin: 30px auto
 
-.intro
-  &__wrap
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-    grid-gap: 40px
-    align-items: center
-    +rmax(sm)
-      text-align: center
-      justify-items: center
+.section-footer
+  text-align: center
+  font-weight: 300
+  margin: 100px auto 0
+  max-width: 540px
+  font-size: 16px
+  +r(sm)
+    font-size: 20px
+  &__txt
+    margin-bottom: 40px
+
+.card
+  display: grid
+  grid-template-columns: 1fr
+  grid-gap: 40px
+  align-items: center
+  text-align: center
+  +r(sm)
+    text-align: left
+    grid-template-columns: 1fr 1fr
+  +r(lg)
+    column-gap: 100px
   &__img
     +r(sm)
       justify-self: end
@@ -27,40 +40,28 @@
         max-width: 70%
         margin: auto
   &__title
-    line-height: 1.2
-    font-weight: normal
-    margin: 0 0 1.2em
-    font-size: 20px
-    +r(sm)
-      font-size: 32px
-  &__txt
-    color: $c-sec
-    margin-bottom: 90px
-    font-size: 16px
-    +r(sm)
-      font-size: 20px
-
-.card
-  display: grid
-  grid-template-columns: 1fr 1fr
-  grid-gap: 100px
-  align-items: center
-  &__img
-    justify-self: center
-    img
-      width: 400px
-  &__title
     font-size: 22px
     margin: 0 0 2em
     line-height: 1.2
+    font-size: 20px
+    +r(md)
+      font-size: 28px
+    +r(lg)
+      font-size: 32px
   &__txt
     font-weight: 300
     color: $c-sec
-    font-size: 20px
+    font-size: 16px
+    +r(md)
+      font-size: 20px
   &__txt-list
     margin: 0
     padding: 0
     list-style: none
+    text-align: left
+    +rmax(sm)
+      max-width: 70%
+      justify-self: center
     li
       padding-left: 30px
       margin-bottom: 20px
@@ -80,46 +81,43 @@
   &__btn
     margin-top: 80px
 
-.counter
-  font-size: 30px
-  font-weight: 100
-  color: #fff
-  margin-bottom: 1em
-
 .card-list
-  .card
-    margin-bottom: 200px
+  .card:not(:last-child)
+    margin-bottom: 100px
   +r(sm)
     .card:nth-child(even)
       .card__img
         order: -1
 
+.intro .card__title
+  +r(lg)
+    font-size: 32px
+
 .service .card
-  display: grid
-  grid-template-columns: 1fr 1fr
-  gap: 0 100px
   .card__img
-    grid-row: span 2
+    +r(sm)
+      grid-row: span 2
   .card__title-wrap
-    align-self: end
+    +r(sm)
+      align-self: end
   .card__txt-list
-    align-self: start
+    +r(sm)
+      align-self: start
 
 .cases
   counter-reset: cases
   .card
     counter-increment: cases
-  &__footer
-    text-align: center
-    font-weight: 300
-    font-size: 20px
-    margin: auto
-    max-width: 540px
-    &-txt
-      margin-bottom: 40px
-
-.cases .counter:before
-  content: "0" counter(cases)
+    &__img
+      +rmax(sm)
+        order: 10
+  &__counter
+    font-size: 30px
+    font-weight: 100
+    color: #fff
+    margin-bottom: 1em
+    &:before
+      content: "0" counter(cases)
 
 .work__wrap
   background: url("../../img/workline-lg.svg") top center no-repeat
@@ -127,51 +125,61 @@
 .work-list
   counter-reset: work
   &__item
-    width: 360px
     counter-increment: work
+    margin-bottom: 100px
     &:nth-child(even)
       margin-left: auto
-    +r(md)
+    +r(sm)
       width: 460px
     +r(xl)
       width: 540px
-
   &__txt-wrap
     position: relative
-
   &__txt
     font-weight: 100
-    height: 180px
-    padding: 20px 20px 20px 80px
-    font-size: 18px
+    padding: 0 20px 20px 80px
+    font-size: 16px
+    height: 138px
     +r(lg)
       font-size: 20px
   &__counter
     position: absolute
+    z-index: 1
     left: 0
     bottom: 0
-    font-size: 30px
-    line-height: 70px
+    font-size: 20px
+    line-height: 50px
     text-align: center
-    width: 70px
-    height: 70px
+    width: 50px
+    height: 50px
     background-color: $c-main
     border: 1px solid
     border-radius: 50%
+    +r(lg)
+      font-size: 30px
+      line-height: 70px
+      width: 70px
+      height: 70px
     &:before
       content: counter(work)
+  &__border
+    position: absolute
+    bottom: 0
+    left: 25px
+    height: 100%
+    width: 1px
+    background-color: #fff
+    +r(lg)
+      left: 35px
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: -4px
+      width: 9px
+      height: 9px
+      border-radius: 50%
+      background-color: #fff
   &__img
     margin: 40px auto
     max-width: 70%
-
-
-// #svg-work-line
-//   position: absolute
-//   top: 0
-//   left: 0
-//   width: 100%
-//   height: 100%
-//   path
-//     fill: transparent
-//     stroke: #fff
-//     stroke-width: 3px
