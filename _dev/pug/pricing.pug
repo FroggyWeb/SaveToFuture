@@ -3,6 +3,7 @@ block var
   - var current= $i18n.glob.nav.company.link[1].name;
   - var title= $i18n.pricing.meta.title;
   - var desc= $i18n.pricing.meta.desc;
+  //- - var priceData= require("../data/price.json");
 
 block content
   section.b-section.--full
@@ -11,19 +12,81 @@ block content
         .h1.title-section= $i18n.pricing.price.title
           span.subtitle-section= $i18n.pricing.price.subtitle
         .b-price-carts
-           each card, index in $i18n.pricing.price.card
+           each card, index in priceData.prices
+            if(card[0] > 0)
+              -var cardFooter = $i18n.pricing.price.word[1] + ' '+ card[0] + " " + $i18n.pricing.price.word[2] + " "+ card[1] + " Mb"
+            else
+              -var cardFooter = $i18n.pricing.price.word[0] + " " + card[1] + " Mb"
             .b-price-cart
               .__img
                 img(src="../img/pricing-card-" + index + ".svg", alt="")
               .__cost= $i18n.pricing.price.currency
-                span= card.cost + " / "
+                span= card[2] + " / "
                 span.__small= $i18n.pricing.price.period
-              .__footer= card.vol
-    .b-pricing.section
+              .__footer= cardFooter
+
+    .b-reduction.section
       .container
         .h2.title-section= $i18n.pricing.reduction.title
           span.subtitle-section= $i18n.pricing.reduction.subtitle
+        each discount, index in priceData.discounts
+          .__item
+            if(index != priceData.discounts.length - 1)
+              -var discountTitle = $i18n.pricing.price.word[1] + " " + discount[0]/12 + " " + $i18n.pricing.price.word[2] + " " + discount[1]/12 + " " + $i18n.pricing.price.word[4]
+            else
+              -var discountTitle = $i18n.pricing.price.word[3] + " " + discount[0]/12 + " " + $i18n.pricing.price.word[4]
+            if(discount[2])
+              .__title= discountTitle
+              .__procentage= discount[2]
 
+    .b-courier.section
+      .container
+        .h2.title-section= $i18n.pricing.courier.title
+          span.subtitle-section= $i18n.pricing.courier.subtitle
+        .__list
+          img(src="../img/logo_DHL.svg", alt="DHL")
+          img(src="../img/logo_FedEx.svg", alt="FedEx")
+          img(src="../img/logo_UPS.svg", alt="UPS")
+        .__txt
+          p= $i18n.pricing.courier.cost + " - " + priceData.courierPrice + $i18n.pricing.price.currency
+          p= $i18n.pricing.courier.service + " "
+            strong= $i18n.pricing.courier.servicename
+
+    .b-calc.section
+      .container
+        .h2.title-section= $i18n.pricing.calc.title
+        form.b-calc-form(action="", name="calc")
+          .__left
+            .__title= $i18n.pricing.calc.calcPeriod
+            .__section
+              each store, index in priceData.prices
+                if(store[0] > 0)
+                  -var sizeStore = $i18n.pricing.price.word[1] + ' '+ store[0] + " " + $i18n.pricing.price.word[2] + " "+ store[1] + " Mb"
+                else
+                  -var sizeStore = $i18n.pricing.price.word[0] + " " + store[1] + " Mb"
+                .inp-styl
+                  if( index == 0 )
+                    input(id="size_store" + index, type="radio", name="calcStorage", checked, value=store[2])
+                  else
+                    input(id="size_store" + index, type="radio", name="calcStorage", value=store[2])
+                  label(for= "size_store" + index) #{sizeStore}
+          .__body
+            .__title= $i18n.pricing.calc.duration
+            .__time.range-wrap
+              input.range(type="range", min="1", max=priceData.discounts[priceData.discounts.length-1][1], name="calcTime", value="1", data-duration="1")
+              output.bubble
+            .__footer
+              .__courier
+                .inp-styl
+                  input(id="courierPrice", type="checkbox", name="courierPrice", value=priceData.courierPrice)
+                  label(for="courierPrice")= $i18n.pricing.calc.delivary
+              .__prices
+                .__prices-item
+                  .__prices-title= $i18n.pricing.calc.price[0]
+                  #js-calc-discount.__prices-vol-discount 0%
+                .__prices-item
+                  .__prices-title= $i18n.pricing.calc.price[1]
+                  #js-calc-total.__prices-vol-total= "$" + priceData.prices[0][2]
 //- Content page_______________________________________
 block scripts
   script(src='../js/pricing.js')

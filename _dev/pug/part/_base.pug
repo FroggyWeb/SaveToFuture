@@ -3,7 +3,7 @@ include ../mixin/_helpers
 doctype html
 block var
 
-html(lang="ru")
+html(lang= $i18n.glob.lang.current)
   head
     meta(charset="utf-8")
     title #{title}

@@ -1,7 +1,7 @@
 {
   "glob": {
     "lang": {
-      "current": "en",
+      "current": "en-US",
       "list": ["en", "ru"]
     },
     "contacts": {
@@ -137,46 +137,39 @@
       "subtitle": "Price for secure capsule is based on total size of files that you want to close in it",
       "period": "Month",
       "currency": "$",
-      "card": [
-        {
-          "cost": "10.5",
-          "vol": "Less than 25 Mb"
-        },
-        {
-          "cost": "10.5",
-          "vol": "From 25 to 100 Mb"
-        },
-        {
-          "cost": "30.25",
-          "vol": "From 100 to 1000 Mb"
-        }
-      ]
+      "word": ["Less than", "From", "to", "More than", "years"]
     },
     "reduction": {
       "title": "Price reduction",
       "subtitle": "Price discount is based on secure capsule storage duration"
     },
-    "discounts": [
-      {
-        "title": "From 1 to 2 years",
-        "procentage": "10%",
-        "length": "25%"
-      },
-      {
-        "title": "From 2 to 5 years",
-        "procentage": "20%",
-        "length": "50%"
-      },
-      {
-        "title": "From 5 to 15 years",
-        "procentage": "30%",
-        "length": "75%"
-      },
-      {
-        "title": "More than 15 years",
-        "procentage": "40%",
-        "length": "100%"
-      }
-    ]
+    "courier": {
+      "title": "Courier service",
+      "subtitle": "Delivery of data with express courier service ",
+      "cost": "The cost of data delivery by courier",
+      "service": "Data delivery is possible by the following services:",
+      "servicename": "DHL Same Day Jetline, FedEx International Next Flight, UPS Express Critical"
+    },
+    "calc": {
+      "title": "Calculate the cost of the secure capsule",
+      "calcPeriod": "Size of your data to be saved in Secure Capsule",
+      "duration": "Storage duration",
+      "delivary": "Need data delivery with express courier service",
+      "price": ["Discount", "Total price"]
+    },
+    "included": {
+      "title": "What is included in the price?",
+      "list": [
+        "Storing your files fully encrypted with the best encryption algorithms",
+        "Absence of encryption keys in online",
+        "Precise execution of your instructions for delivering files to your addressees",
+        "Multi-step backup of encrypted secure capsules",
+        "Safe and reliable storages of secure capsules for a period from 1 month to 50 years",
+        "Option to prohibit the deletion of data ahead of time",
+        "Option to prevent changes to secure capsules settings",
+        "No one could decrypt your files from a secure capsule",
+        "Optionally delivery of data with premium express courier services"
+      ]
+    }
   }
 }

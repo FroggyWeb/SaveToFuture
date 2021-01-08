@@ -1,16 +1,15 @@
 .price-carts
-  display: flex
-  width: 100%
+  display: grid
+  grid-template-columns: repeat(3,1fr)
+  column-gap: 30px
 
 .price-cart
-  flex: 1 1
-  display: flex
+  display: grid
+  grid-template-rows: 1fr auto auto
   box-shadow: 0 0 20px rgba(#000, 0.25)
   flex-direction: column
   text-align: center
   border-radius: 5px
-  &:not(:last-child)
-    margin-right: 40px
   &__img
     padding: 60px 0
     margin: auto
@@ -23,3 +22,70 @@
     padding: 30px
     text-align: center
     background-color: #1F2633
+
+.reduction
+  &__items
+    display: grid
+    align-items: center
+    gap: 20px 40px
+    grid-template-columns: auto 1fr
+  &__procentage
+    span
+      display: block
+      padding: 5px 10px
+      text-align: center
+    &::nth-of-type(2)
+      background-color: red
+
+.calc-form
+  display: grid
+  grid-template-columns: 1fr
+  gap: 60px
+  +r(lg)
+    grid-template-columns: 1fr 2fr
+    gap: 120px
+    &__left
+      padding-right: 60px
+      border-right: 1px solid $c-sec
+  &__title
+    font-size: 16px
+    font-weight: bold
+    margin: 0 0 1.5em
+    +r(lg)
+      font-size: 22px
+  &__section
+    display: flex
+    flex-direction: column
+  &__time
+    margin-bottom: 80px
+    +r(lg)
+      margin-bottom: 120px
+  &__footer
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+    gap: 60px
+  &__prices
+    display: flex
+    justify-content: flex-end
+  &__prices-item:not(:first-child)
+    margin-left: 40px
+  &__prices-title
+    color: $c-sec
+    margin-bottom: 10px
+  &__prices-vol-discount,
+  &__prices-vol-total
+    padding: 20px
+    font-size: 24px
+    text-align: center
+    text-align: center
+    padding: 20px
+    border-radius: 5px
+    font-size: 24px
+  &__prices-vol-discount
+    background-color: #252A35
+    border: 1px solid  #252A35
+  &__prices-vol-total
+    border: 1px solid
+
+
+
