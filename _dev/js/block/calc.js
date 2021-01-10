@@ -1,8 +1,8 @@
 const calcForm = document.querySelector(".calc-form");
 const htmlPrice = document.getElementById("js-calc-total");
 const htmlDiscount = document.getElementById("js-calc-discount");
-// const url = "https://mydatacapsule.com/api/getPrices";
-const url = "./../../data/price.json";
+const url = "https://mydatacapsule.com/api/getPrices";
+// const url = "./../../data/price.json";
 let dataJson;
 
 fetch(url)
