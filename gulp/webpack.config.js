@@ -6,9 +6,10 @@ const path = require("path");
 module.exports = {
   mode: config.production ? "production" : "development",
   entry: {
-    main: "./" + config.src.js + "/main.js",
     index: "./" + config.src.js + "/index.js",
     pricing: "./" + config.src.js + "/pricing.js",
+    case: "./" + config.src.js + "/case.js",
+    faq: "./" + config.src.js + "/faq.js",
   },
 
   output: {
@@ -17,18 +18,20 @@ module.exports = {
     publicPath: "/",
   },
 
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       vendor: {
-  //         test: /node_modules/,
-  //         chunks: "initial",
-  //         name: "vendor",
-  //         enforce: true
-  //       }
-  //     }
-  //   }
-  // },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules/,
+          chunks: "all",
+          name: "vendor",
+          enforce: true,
+          minSize: 1,
+          minChunks: 2,
+        },
+      },
+    },
+  },
 
   module: {
     rules: [

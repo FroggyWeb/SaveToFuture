@@ -31,7 +31,7 @@
           { "name": "About us", "url": "index.html#about" },
           { "name": "Pricing", "url": "pricing.html" },
           { "name": "How it works?", "url": "index.html#works" },
-          { "name": "Use cases", "url": "index.html#cases" },
+          { "name": "Use cases", "url": "cases.html#cases" },
           { "name": "FAQ", "url": "faq.html" }
         ]
       }
@@ -169,7 +169,127 @@
         "Option to prevent changes to secure capsules settings",
         "No one could decrypt your files from a secure capsule",
         "Optionally delivery of data with premium express courier services"
-      ]
+      ],
+      "btn": "Get started"
     }
+  },
+
+  "cases": {
+    "meta": {
+      "title": "Use cases",
+      "desc": "Описание страницы cases"
+    },
+    "title": "Use cases",
+    "subtitle": "Here are examples of using the Save To Future service in real life",
+    "items": [
+      {
+        "title": "Handover logins and passwords",
+        "img": "case_1.svg",
+        "cnt": [
+          {
+            "title": "Purpose",
+            "txt": "Transferring over to a relatives or trusted persons the logins and passwrods to your accounts, which you wish to share with him/them in case of your death, missing, disability, or other reasons."
+          },
+          {
+            "title": "Why SaveToFuture?",
+            "txt": "You cannot disclosure your passwords to anyone, include law firms and other people. You also should not give passwords to any of your relatives ahead of time. Failing to do so, you are under critical risk of loosing control for your accounts and/or looking contant of these accounts."
+          }
+        ]
+      },
+      {
+        "title": "Protection against threats from third parties, for cases of disability and missing",
+        "img": "case_2.svg",
+        "cnt": [
+          {
+            "title": "header",
+            "txt": "lorem text 2"
+          }
+        ]
+      },
+      {
+        "title": "A long term safe for your own data",
+        "img": "case_3.svg",
+        "cnt": [
+          {
+            "title": "",
+            "txt": "Душа моя озарена неземной радостью, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца. Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых"
+          },
+          {
+            "title": "",
+            "txt": "Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни."
+          }
+        ]
+      },
+      {
+        "title": "Passing on important information to your heirs",
+        "img": "case_4.svg",
+        "cnt": [
+          {
+            "title": "head",
+            "txt": "lorem text 4"
+          }
+        ]
+      },
+      {
+        "title": "Preservation of betting agreements",
+        "img": "case_5.svg",
+        "cnt": [
+          {
+            "title": "head 5",
+            "txt": "lorem text 5"
+          }
+        ]
+      },
+      {
+        "title": "Safety for Investigative Journalism",
+        "img": "case_6.svg",
+        "cnt": [
+          {
+            "title": "",
+            "txt": "lorem text 5"
+          }
+        ]
+      },
+      {
+        "title": "For secret agents and spies",
+        "img": "case_7.svg",
+        "cnt": [
+          {
+            "title": "",
+            "txt": "lorem text 5"
+          }
+        ]
+      },
+      {
+        "title": "Farewell letters",
+        "img": "case_8.svg",
+        "cnt": [
+          {
+            "title": "",
+            "txt": "lorem text 5"
+          }
+        ]
+      },
+      {
+        "title": "Physical delivery of confidential information",
+        "img": "case_9.svg",
+        "cnt": [
+          {
+            "title": "",
+            "txt": "lorem text 5"
+          }
+        ]
+      },
+      {
+        "title": "Transferring cryptocurrency wallets access keys",
+        "img": "case_10.svg",
+        "cnt": [
+          {
+            "title": "",
+            "txt": "lorem text 10"
+          }
+        ]
+      }
+    ]
   }
 }

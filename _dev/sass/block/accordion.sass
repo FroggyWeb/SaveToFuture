@@ -1,0 +1,68 @@
+.acc
+  &__item
+    margin-bottom: 20px
+    box-shadow: 0 0 5px rgba(#000, .5)
+  &__header
+    position: relative
+    display: flex
+    align-items: center
+    cursor: pointer
+    padding: 20px 60px 20px 10px
+    +r(sm)
+      padding-left: 20px
+  &__header-img
+    position: relative
+    background-color: $c-dark
+    margin-right: 20px
+    border-radius: 50%
+    height: 48px
+    flex: 0 0 48px
+    +r(sm)
+      height: 70px
+      flex: 0 0 70px
+      margin-right: 30px
+    img
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      max-width: 60%
+  &__header-title
+    font-size: 16px
+    margin: 0
+    font-weight: bold
+    +rmax(xs)
+      font-size: 16px
+    +r(sm)
+      font-size: 20px
+  &__control-ico
+    position: absolute
+    color: #fff
+    top: 50%
+    right: 10px
+    line-height: 0
+    font-size: 20px
+    transform: translateY(-50%)
+    transition:  all .1s
+    +r(xs)
+      right: 20px
+  &__panel-inner
+    padding: 20px
+  &__panel
+    background-color: $c-dark
+    overflow: hidden
+    height: 0
+    p
+      color: $c-sec
+  &__panel-title
+    margin: 0 0 1em
+    font-size: 14px
+    &:not(:first-child)
+      margin-top: 2em
+    +r(xs)
+      font-size: 18px
+
+
+.acc-open .acc__control-ico
+  transform: translateY(-50%) rotate(180deg)
+

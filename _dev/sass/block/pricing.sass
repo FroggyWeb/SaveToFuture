@@ -1,7 +1,9 @@
 .price-carts
   display: grid
-  grid-template-columns: repeat(3,1fr)
   column-gap: 30px
+  grid-template-columns: 1fr
+  +r(md)
+    grid-template-columns: repeat(3, 1fr)
 
 .price-cart
   display: grid
@@ -10,6 +12,7 @@
   flex-direction: column
   text-align: center
   border-radius: 5px
+  margin-bottom: 20px
   &__img
     padding: 60px 0
     margin: auto
@@ -23,19 +26,65 @@
     text-align: center
     background-color: #1F2633
 
-.reduction
-  &__items
-    display: grid
+.price-cart
+  +rm(450, 767)
+    text-align: left
     align-items: center
-    gap: 20px 40px
-    grid-template-columns: auto 1fr
+    justify-content: center
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+    &__img
+      grid-row: span 2
+    &__cost
+      margin-bottom: 0
+      order: 1
+      align-self: start
+    &__footer
+      padding: 0
+      text-align: left
+      background-color: transparent
+      font-size: 16px
+      align-self: end
+
+.reduction
+  &__item
+    display: flex
+    align-items: center
+    margin-bottom: 1em
+    width: 100%
+    &:nth-child(1) .reduction__procentage span
+      width: 25%
+      background-color: #515C70
+    &:nth-child(2) .reduction__procentage span
+      width: 50%
+      background-color: #627087
+    &:nth-child(3) .reduction__procentage span
+      width:  75%
+      background-color: #8692A9
+  &__title
+    flex: 0 0 130px
+    +r(sm)
+      flex: 0 0 150px
   &__procentage
+    flex: 1
     span
       display: block
       padding: 5px 10px
       text-align: center
-    &::nth-of-type(2)
-      background-color: red
+      background-color: #B7BFCF
+
+.courier
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-around
+    img
+      margin: 0 15px 40px
+      +r(lg)
+        margin-bottom: 60px
+  &__txt
+    +rmax(sm)
+      text-align: center
 
 .calc-form
   display: grid

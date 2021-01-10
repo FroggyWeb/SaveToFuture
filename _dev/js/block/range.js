@@ -15,19 +15,35 @@ const formatPeriod = (duration, locale) => {
 const allRanges = document.querySelectorAll(".range-wrap");
 allRanges.forEach((wrap) => {
   const range = wrap.querySelector(".range");
+  const rangeSel = wrap.querySelector(".range-sel");
   const bubble = wrap.querySelector(".bubble");
 
   range.addEventListener("change", () => {
     setBubble(range, bubble);
   });
+  range.addEventListener("input", () => {
+    setRangeSel(range, rangeSel);
+  });
   setBubble(range, bubble);
 });
 
-function setBubble(range, bubble) {
-  let val = range.value;
+function calcPosition(range) {
+  const val = range.value;
   const min = range.min ? range.min : 0;
   const max = range.max ? range.max : 100;
   const newVal = Number(((val - min) * 100) / (max - min));
+  return newVal;
+}
+
+function setRangeSel(range, rangeSel) {
+  const val = range.value;
+  const newVal = calcPosition(range);
+  rangeSel.style.width = newVal + "%";
+}
+
+function setBubble(range, bubble) {
+  let val = range.value;
+  const newVal = calcPosition(range);
   const dateDuration = range.dataset.duration;
   const dates = formatPeriod(
     { years: Math.floor(val / 12), months: val % 12 },
