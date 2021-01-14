@@ -1,0 +1,35 @@
+extend ./part/_base
+block var
+  - var current= $i18n.glob.nav.company.link[1].name;
+  - var title= $i18n.cases.meta.title;
+  - var desc= $i18n.cases.meta.desc;
+
+block content
+  section.b-faq.section
+    .container
+      .h1.title-section= $i18n.faq.title
+        span.subtitle-section= $i18n.faq.subtitle
+      .b-cases
+        .b-acc
+          each item in $i18n.faq.items
+            .__item
+              .__header.js-acc-control
+                .__header-img
+                  img(src= "../img/ico/" + item.img, alt= item.title)
+                h2.__header-title= item.title
+                .__control-ico
+                  +svgMono("arrow")
+              .__panel.js-acc-panel
+                .__panel-inner
+                  .b-acc
+                    each cnt in item.cnt
+                      .__item.js-acc-control
+                        h3.__panel-title= cnt.quest
+                      .__panel.js-acc-panel
+                        p #{cnt.ansver}
+
+
+//- Content page_______________________________________
+block scripts
+  script(src='../js/vendor.js')
+  script(src='../js/case.js')

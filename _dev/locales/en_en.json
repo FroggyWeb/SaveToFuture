@@ -291,5 +291,55 @@
         ]
       }
     ]
+  },
+
+  "faq": {
+    "meta": {
+      "title": "FAQ",
+      "desc": "Описание страницы FAQ"
+    },
+    "title": "Have any questions?",
+    "subtitle": "If you have any questions, enter what you are looking for!",
+    "items": [
+      {
+        "title": "Create and Edit Secure Capsules",
+        "img": "faq_1.svg",
+        "cnt": [
+          {
+            "quest": "Can I edit some files that I saved in a secure capsule?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
+          },
+          {
+            "quest": "Can I replace some files that I saved in a secure capsule?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
+          },
+          {
+            "quest": "Can I delete some files from my secure capsule?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
+          },
+          {
+            "quest": "Can I add more files into my existing secure capsule?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
+          },
+          {
+            "quest": "How to edit settings for a secure capsule?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
+          },
+          {
+            "quest": "I forgot my codeword. Can I restore it?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
+          },
+          {
+            "quest": "Can I permanently delete my secure capsule?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
+          },
+          {
+            "quest": "If I deleted a secure capsule, what will happen with files that was locked in that secure capsule?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
+          }
+        ]
+      }
+    ]
   }
+
 }

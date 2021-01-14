@@ -5,7 +5,7 @@ block var
   - var desc = $i18n.index.meta.desc;
 
 block content
-  section.b-section.--full
+  section.b-section.--full.--dark
     .b-intro
       .container
         .__wrap
@@ -18,7 +18,7 @@ block content
               a(href="#").b-btn.--fill.__btn= $i18n.index.intro.button
                 +svgMono("arrow-right")
             .__img
-              img(src="../img/content/data-icon.png", alt="")
+              img(src="../img/content/index-intro.png", alt=$i18n.index.intro.title)
 
     //- img(src="../../img/svg-sprite/play.svg", alt="")
   section.b-section.--full
@@ -29,10 +29,10 @@ block content
           .swiper-pagination
           .swiper-wrapper
             -var slider= $i18n.index.service.slider
-            each slide in slider
+            each slide, index in slider
               .b-card.swiper-slide
                 .__img
-                  img(src="../img/content/data-icon.png", alt= slide.title)
+                  img(src="../img/content/slider-" + (index + 1) + ".png" , alt= slide.title)
                 .__title-wrap
                   h3.__title= slide.title
                   span.separator
@@ -47,13 +47,13 @@ block content
           .btn-wrap
             a(href="").b-btn.--outline= $i18n.index.service.btn
 
-  section.b-section.--full
+  section.b-section.--full.--dark
     .b-cases
       .container
         h2.title-section= $i18n.index.cases.title
           span.subtitle-section= $i18n.index.cases.subtitle
         .card-list
-          each item in $i18n.index.cases.block
+          each item, index in $i18n.index.cases.block
             .b-card
               .__cnt
                 .cases__counter
@@ -61,7 +61,7 @@ block content
                   span.separator
                 .__txt= item.text
               .__img
-                img(src="../img/content/data-icon.png", alt= item.title)
+                img(src="../img/content/cases-" + (index + 1) + ".png" , alt= item.title)
         footer.b-section-footer
           .__txt= $i18n.index.cases.footer
           a(href="").b-btn.--outline= $i18n.index.cases.button
@@ -72,14 +72,14 @@ block content
         .__wrap
           h2.title-section= $i18n.index.work.title
           .b-work-list
-            each item in $i18n.index.work.block
+            each item, index in $i18n.index.work.block
               .__item
                 .__txt-wrap
                   .__txt= item.txt
                   .__counter
                   .__border
                 .__img
-                  img(src="../img/content/data-icon.png", alt="")
+                  img(src="../img/content/works-" + (index + 1) + ".png" , alt= item.txt)
 
   section.b-section.--full
     .container
@@ -91,7 +91,7 @@ block content
           .__txt= $i18n.index.use.txt
           .b-btn.--fill.__btn= $i18n.index.use.button
         .__img
-          img(src="../img/content/data-icon.png", alt="")
+          img(src="../img/content/footer-banner.png", alt=$i18n.index.use.title)
 //- Content page_______________________________________
 block scripts
   script(src='../js/vendor.js')
