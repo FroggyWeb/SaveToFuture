@@ -21,33 +21,38 @@
 .card
   display: grid
   grid-template-columns: 1fr
-  grid-gap: 40px
+  gap: 40px
   align-items: center
   text-align: center
   +r(sm)
     text-align: left
     grid-template-columns: 1fr 1fr
   +r(lg)
-    column-gap: 100px
+    gap: 0 100px
   &__img
-    +r(sm)
-      justify-self: end
+    position: relative
+    max-width: 400px
+    justify-self: center
     +rmax(sm)
       order: -1
-    // img
-    //   width: 400px
-    //   +rmax(sm)
-    //     max-width: 70%
-    //     margin: auto
+  &__img--outer
+    +r(lg)
+      align-self: start
+      justify-self: end
+      img
+        position: absolute
+        top: 0
+        right: 0
+        width: 620px
+        max-width: none
+
   &__title
     font-size: 22px
     margin: 0 0 2em
     line-height: 1.2
-    font-size: 20px
-    +r(md)
-      font-size: 28px
+    font-size: 18px
     +r(lg)
-      font-size: 32px
+      font-size: 21px
   &__txt
     font-weight: 300
     color: $c-sec
@@ -89,9 +94,12 @@
       .card__img
         order: -1
 
-.intro .card__title
+.intro
+  .card__img
+    max-width: none
   +r(lg)
-    font-size: 32px
+    .card__title
+      font-size: 30px
 
 .service .card
   .card__img

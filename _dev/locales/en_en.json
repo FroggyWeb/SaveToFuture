@@ -338,8 +338,51 @@
             "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis. Libero interdum orci arcu risus, rhoncus. Semper urna nisl convallis eget tempor aliquam lectus enim feugiat. Sed nisl imperdiet at egestas ultricies feugiat id egestas augue.  Et aliquam ultrices ipsum diam massa, magna. Mollis dis eget elementum nibh porttitor quis."
           }
         ]
+      },
+      {
+        "title": "Storage period, Events for opening secure capsule, and Execution of your instructions",
+        "img": "faq_2.svg",
+        "cnt": [
+          {
+            "quest": "Question?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          },
+          {
+            "quest": "Question?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        ]
+      },
+      {
+        "title": "Data Security, Privacy, Integrity and Reliability",
+        "img": "faq_3.svg",
+        "cnt": [
+          {
+            "quest": "Question?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        ]
+      },
+      {
+        "title": "Payments and Pricing",
+        "img": "faq_4.svg",
+        "cnt": [
+          {
+            "quest": "Question?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        ]
+      },
+      {
+        "title": "Support and Corporate Information",
+        "img": "faq_5.svg",
+        "cnt": [
+          {
+            "quest": "Question?",
+            "ansver": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        ]
       }
     ]
   }
-
 }

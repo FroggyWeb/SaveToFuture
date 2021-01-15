@@ -8,7 +8,8 @@ block var
 block content
   section.b-pricing.section
     .container
-      .h1.title-section= $i18n.pricing.price.title
+      .header-section
+        h1.title-section= $i18n.pricing.price.title
         span.subtitle-section= $i18n.pricing.price.subtitle
       .b-price-carts
         each card, index in priceData.prices
@@ -26,7 +27,8 @@ block content
 
   section.b-reduction.section
     .container
-      .h2.title-section= $i18n.pricing.reduction.title
+      .header-section
+        h2.title-section= $i18n.pricing.reduction.title
         span.subtitle-section= $i18n.pricing.reduction.subtitle
       .__items
         each discount, index in priceData.discounts
@@ -42,7 +44,8 @@ block content
 
   section.b-courier.section
     .container
-      .h2.title-section= $i18n.pricing.courier.title
+      .header-section
+        h2.title-section= $i18n.pricing.courier.title
         span.subtitle-section= $i18n.pricing.courier.subtitle
       .__list
         img(src="../img/logo_DHL.svg", alt="DHL")
@@ -55,7 +58,8 @@ block content
 
   section.b-calc.section
     .container
-      .h2.title-section= $i18n.pricing.calc.title
+      .header-section
+        h2.title-section= $i18n.pricing.calc.title
       form.b-calc-form(action="", name="calc")
         .__left
           .__title= $i18n.pricing.calc.calcPeriod
@@ -92,7 +96,8 @@ block content
 
   section.b-price-included.section
     .container
-      .h2.title-section= $i18n.pricing.included.title
+      .header-section
+        h2.title-section= $i18n.pricing.included.title
       ul.b-ul-list
         each inc in $i18n.pricing.included.list
           li.__item= inc

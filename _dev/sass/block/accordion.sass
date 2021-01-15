@@ -1,7 +1,8 @@
 .acc
   &__item
-    margin-bottom: 20px
     box-shadow: 0 0 5px rgba(#000, .5)
+    &:not(:last-child)
+      margin-bottom: 20px
   &__header
     position: relative
     display: flex
@@ -53,6 +54,7 @@
     overflow: hidden
     height: 0
     p
+      margin: 1em 0 1em
       color: $c-sec
   &__panel-title
     margin: 0 0 1em

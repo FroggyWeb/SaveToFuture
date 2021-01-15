@@ -7,7 +7,9 @@ block var
 block content
   section.b-faq.section
     .container
-      .h1.title-section= $i18n.faq.title
+      .b-header-section
+        img.__img(src="../img/faq_header.svg" alt="FAQ")
+        h1.title-section= $i18n.faq.title
         span.subtitle-section= $i18n.faq.subtitle
       .b-cases
         .b-acc
@@ -23,11 +25,10 @@ block content
                 .__panel-inner
                   .b-acc
                     each cnt in item.cnt
-                      .__item.js-acc-control
-                        h3.__panel-title= cnt.quest
+                      .js-acc-control
+                        h3.faq__question= cnt.quest
                       .__panel.js-acc-panel
                         p #{cnt.ansver}
-
 
 //- Content page_______________________________________
 block scripts
