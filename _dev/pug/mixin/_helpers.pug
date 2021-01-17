@@ -43,3 +43,7 @@ mixin menu(menudata, mod)
             each subitem in item.sub
               li.menu__item(class=(current === subitem.name ? "active" : undefined))
                 a.menu__link(href=subitem.url) #{subitem.name}
+
+mixin flag(century)
+  span.flag
+    img(src="../img/flags/" + century.toUpperCase() + ".svg")

@@ -1,3 +1,29 @@
+.page
+  position: relative
+
+.container
+  max-width: 1180px
+  margin: auto
+  padding: 0 20px
+
+.section
+  padding: 120px 0
+  background: $c-main url("../../img/bg-section-light.png")
+  &__footer
+    margin-top: 80px
+    text-align: center
+  &--full
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &--dark
+    background: $c-main url("../../img/bg-section.png")
+
+.mob-nav + .section
+  +r(lg)
+    padding-top: 160px
+
 .header-page
   width: 100%
   z-index: 100
@@ -9,7 +35,7 @@
   &.sticky
     padding: 10px 0
     background-color: $c-main
-  +rmax(lg)
+  +rmax(xl)
     padding: 10px 0
   &__wrap
     display: flex
@@ -24,12 +50,12 @@
   &__side
     display: flex
     align-items: center
-    +rmax(lg)
+    +rmax(xl)
       margin-left: auto
 
   .menu,
   .lang-swith
-    +rmax(lg)
+    +rmax(xl)
       display: none
 
 

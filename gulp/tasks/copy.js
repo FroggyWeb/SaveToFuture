@@ -13,9 +13,9 @@ const copyFonts = () =>
 
 // const copyPhp = () => gulp.src(config.src.php + '/*.*').pipe(gulp.dest(config.dest.php));
 
-// const copyJson = () => gulp.src(config.src.json + '/*.*').pipe(gulp.dest(config.dest.json));
-
 // const copyJs = () => gulp.src(config.src.js + '/**/*.*').pipe(gulp.dest(config.dest.js));
+const copyJson = () =>
+  gulp.src(config.src.json + "/*.*").pipe(gulp.dest(config.dest.json));
 
 const copyTask = () => gulp.parallel(copyRootfiles, copyFonts);
 

@@ -22,15 +22,9 @@ $c-text: #fff;
 $c-link: inherit;
 $c-active: $c-brand;
 
-// bootstrap setup
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
+$flag-icon-css-path: "../img/flags" !default;
+$flag-icon-rect-path: "/4x3" !default;
+$flag-icon-square-path: "/1x1" !default;
 
 $container-max-widths: (
   xxl: 1400px,
@@ -48,8 +42,3 @@ $container-max-widths: (
 @include font("Roboto", "subset-Roboto-Italic", normal, italic, "Roboto Bold");
 @include font("Roboto", "subset-Roboto-Regular", normal, "Roboto Regular");
 @include font("Roboto", "subset-Roboto-Bold", bold, "Roboto Italic");
-// @include font("Philosopher", "philosopher-bold-webfont", 700 );
-// @include font("PT Sans", "pt_sans-web-regular-webfont", 400);
-// @include font("PT Sans", "pt_sans-web-italic-webfont", 400 , italic);
-// @include font("PT Sans", "pt_sans-web-bolditalic-webfont", 700, italic);
-// @include font("PT Sans", "pt_sans-web-bold-webfont", 700);

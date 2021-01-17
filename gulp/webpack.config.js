@@ -10,6 +10,7 @@ module.exports = {
     pricing: "./" + config.src.js + "/pricing.js",
     case: "./" + config.src.js + "/case.js",
     faq: "./" + config.src.js + "/faq.js",
+    locale: "./" + config.src.js + "/locale.js",
   },
 
   output: {

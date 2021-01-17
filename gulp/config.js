@@ -30,7 +30,7 @@ const config = {
     fonts: "_dev/fonts",
     video: "_dev/video",
     php: "_dev/php",
-    json: "_dev/json",
+    json: "_dev/data",
   },
   dest: {
     root: destPath,
@@ -41,7 +41,7 @@ const config = {
     fonts: destPath + "/fonts",
     video: destPath + "/video",
     php: destPath + "/php",
-    json: destPath + "/json",
+    json: destPath + "/data",
   },
 
   setEnv: function (env) {

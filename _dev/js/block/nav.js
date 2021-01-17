@@ -25,8 +25,3 @@ $("body").on("click", function (e) {
   burger.removeClass("open");
   $("body").removeClass("mob-nav-open");
 });
-
-$(".lang-swith__control").on("click", function (e) {
-  e.stopPropagation();
-  $(this).parent().toggleClass("open");
-});

@@ -16,7 +16,7 @@
   height: 24px
   transition: 0.5s ease
   margin-left: 40px
-  +r(lg)
+  +r(xl)
     display: none
   span
     background: #fff
@@ -65,12 +65,13 @@
   margin: 80px 20px 0 0
   padding:  10px
   background-color: $c-main
-  z-index: 100
+  z-index: 200
   box-shadow: 0 0 10px rgba(#000, .5)
   opacity: 0
   visibility: hidden
   transition: all .5s
-  +r(lg)
+  max-height: 80vh
+  +r(xl)
     display: none
   .menu
     flex-direction: column
@@ -82,7 +83,7 @@
     margin: 0
 
 body.mob-nav-open
-  +rmax(lg)
+  +rmax(xl)
     overflow: hidden
     .mob-nav
       opacity: 1
@@ -96,3 +97,45 @@ body.mob-nav-open
       top: 0
       background-color: rgba($c-main,.9)
       z-index: 50
+
+.lang-swith
+  position: relative
+  &__list
+    box-shadow: 0 0 5px rgba(#000, .5)
+    z-index: 100
+    width: 70px
+    background-color: #fff
+    color: #000
+    border-radius: 10px
+    transition: opacity .2s
+    opacity: 0
+    display: none
+    margin-top: 10px
+    +r(xl)
+      position: absolute
+      top: calc(100% + 10px)
+  &__item
+    display: flex
+    align-items: center
+    text-transform: uppercase
+    padding: 7px 10px
+    cursor: pointer
+    font-size: 14px
+    transition:  background-color .2s
+    user-select: none
+    &:hover
+      background-color: $c-main
+      color: #fff
+    .flag
+      flex: 0 0 20px
+      margin-right: 5px
+  &.open &__list
+    display: block
+    opacity: 1
+    animation: showBlock 1s
+
+@keyframes showBlock
+  0%
+    opacity: 0
+  100%
+    opacity: 1

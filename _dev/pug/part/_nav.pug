@@ -1,7 +1,7 @@
 .b-header-page
   .container.__wrap
     .b-logo.__logo
-      a(href="/").__link
+      a(href="./index.html").__link
         picture.__img
           source(media="(max-width: 649px)" srcset="../img/logo_short.svg")
           source(media="(min-width: 650px)" srcset="../img/logo.svg")
@@ -16,9 +16,16 @@
         .__control
           span.__lang= $i18n.glob.lang.current
           +svgMono("world")
+        .__list
+          each lang in $i18n.glob.lang.list
+            .__item(data-lang=lang)
+              +flag(lang)
+              = lang
+
+
 
       .__member
-        a(href="").b-btn.--fill SIGN IN
+        a(href="https://app.savetofuture.com", target="_blank").b-btn.--fill SIGN IN
 
     .burger
       span

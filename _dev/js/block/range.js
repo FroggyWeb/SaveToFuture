@@ -4,7 +4,8 @@ import formatDuration from "date-fns/formatDuration";
 
 const getLocale = (locale) => require(`date-fns/locale/${locale}/index.js`);
 
-const lang = document.documentElement.lang;
+let lang = document.documentElement.lang;
+if (lang == "en") lang = "en-US";
 
 const formatPeriod = (duration, locale) => {
   return formatDuration(duration, {
