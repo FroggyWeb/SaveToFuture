@@ -8,6 +8,7 @@ gulp.task("server", (cb) => tBuild("server", cb));
 gulp.task("clear", () => tBuild("clear"));
 gulp.task("sass", () => tBuild("sass"));
 gulp.task("pug", () => tBuild("pug"));
+gulp.task("doc", () => tBuild("doc"));
 gulp.task("javascript", tBuild("javascript"));
 gulp.task("images", () => tBuild("images"));
 gulp.task("sprite:svg", tBuild("sprite-svg/sprite-svg"));
@@ -17,6 +18,7 @@ gulp.task("copy", tBuild("copy"));
 gulp.task("sass:watch", tWatch("sass"));
 gulp.task("copy:watch", tWatch("copy"));
 gulp.task("pug:watch", tWatch("pug"));
+gulp.task("doc:watch", tWatch("doc"));
 gulp.task("javascript:watch", tWatch("javascript"));
 gulp.task("images:watch", tWatch("images"));
 gulp.task("sprite:svg:watch", tWatch("sprite-svg/sprite-svg"));
@@ -42,6 +44,7 @@ const makeBuild = (mode) => {
     gulp.parallel("sprite:svg", "sprite:png"),
     gulp.parallel("sass", "javascript"),
     "pug",
+    "doc",
     gulp.parallel("images", "copy")
   );
 };
@@ -55,6 +58,7 @@ gulp.task(
     "sass:watch",
     "copy:watch",
     "pug:watch",
+    "doc:watch",
     "javascript:watch",
     "images:watch",
     "sprite:svg:watch",

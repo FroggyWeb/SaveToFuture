@@ -1,0 +1,110 @@
+include ../mixin/_helpers
+
+doctype html
+block var
+
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    meta(name="description" content= desc )
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="icon" href="../fav/favicon.ico" type="image/x-icon")
+    link(rel="apple-touch-icon" sizes="180x180" href="../fav/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="../fav/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="../fav/favicon-16x16.png")
+    link(rel="manifest" href="../fav/site.webmanifest")
+    link(rel="mask-icon" href="../fav/safari-pinned-tab.svg" color="#292b34")
+    meta(name="msapplication-TileColor" content="#292b34")
+    meta(name="theme-color" content="#292b34")
+    link(rel='stylesheet', href='../css/common.css')
+
+  body
+    .page
+      .page__content
+
+        .b-header-page
+          .container.__wrap
+            .b-logo.__logo
+              a(href="./index.html").__link
+                picture.__img
+                  source(media="(max-width: 649px)" srcset="../img/logo_short.svg")
+                  source(media="(min-width: 650px)" srcset="../img/logo.svg")
+                  img(src="../img/logo.svg", alt="SaveToFuture")
+            nav.nav.__nav
+              //- -
+              -
+                var menudata = [
+                  { "name": "About us", "url": "/en/index.html#about" },
+                  { "name": "Pricing", "url": "/en/pricing.html" },
+                  { "name": "How it works?", "url": "/en/index.html#works" },
+                  { "name": "Use cases", "url": "/en/cases.html#cases" },
+                  { "name": "FAQ", "url": "/en/faq.html" }
+                ]
+              +menu(menudata, "menu--header")
+
+            .__side
+
+              .__member
+                a(href="https://app.savetofuture.com", target="_blank").b-btn.--fill SIGN IN
+
+            .burger
+              span
+              span
+              span
+
+        .mob-nav
+
+        block content
+
+        footer.b-footer-page
+          .container
+            .__wrap
+              .__logo
+                a(href="/" )
+                  img(src="../img/logo.svg", alt="SaveToFuture")
+              .__aside
+                each menu, key in data.glob.nav
+                  .__naw-wrap
+                    h3.footer-title= menu.title
+                    -
+                      var menufooter = menu.link
+                    +menu(menufooter, "menu--footer")
+
+                .__contact
+                  h3.footer-title= data.glob.contacts.title
+                  p
+                    a(href="mailTo: #{data.glob.contacts.mail}")= data.glob.contacts.mail
+                  p
+                    a(href="tel: #{data.glob.contacts.tel}")= data.glob.contacts.tel
+                  p= data.glob.contacts.post
+
+              .__soc
+                .b-soc
+                  a(href= data.glob.soc.twitter, target="_blank").__link
+                    +svgMono("soc-tw")
+                  a(href= data.glob.soc.facebook, target="_blank").__link
+                    +svgMono("soc-fb")
+                  a(href=data.glob.soc.LinkedIn, target="_blank").__link
+                    +svgMono("soc-linkedin")
+                  a(href= data.glob.soc.youtube, target="_blank").__link
+                    +svgMono("soc-youtube")
+                  a(href= data.glob.soc.telegram, target="_blank").__link
+                    +svgMono("soc-telegram")
+
+              .copyright 	&copy; SaveToFuture <span id="copy-year">2020</span>. All rights reserved
+
+
+      //- include ./_footer.pug
+
+
+
+  //- block form
+    //- script(src='../js/vendors/jquery-3.4.1.min.js')
+
+  block scripts
+  script(src='../js/vendor.js')
+  script(src='../js/main.js')
+
+  //- script(src='js/hot-bundle.js')

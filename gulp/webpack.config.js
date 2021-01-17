@@ -6,6 +6,7 @@ const path = require("path");
 module.exports = {
   mode: config.production ? "production" : "development",
   entry: {
+    main: "./" + config.src.js + "/main.js",
     index: "./" + config.src.js + "/index.js",
     pricing: "./" + config.src.js + "/pricing.js",
     case: "./" + config.src.js + "/case.js",

@@ -20,14 +20,18 @@ function initService() {
     let el = $(this).find(".pagination-icon__wrap");
     let timer = $(this).find(".pagination-icon__timer");
     tlService
-      .from(el, { opacity: 0, duration: 0.5 })
-      .to(el, { scale: 1.1, duration: 0.5 }, "-=.5")
-      .to(el, { scale: 1, duration: 0.5 })
-      .from(timer, {
-        scaleX: 0,
-        duration: 0.5,
-        transformOrigin: "left",
-      });
+      .from(el, { opacity: 0, duration: 0.25 })
+      .to(el, { scale: 1.1, duration: 0.25 }, "-=.5")
+      .to(el, { scale: 1, duration: 0.25 })
+      .from(
+        timer,
+        {
+          scaleX: 0,
+          duration: 0.5,
+          transformOrigin: "left",
+        },
+        "-=1"
+      );
   });
 
   tlService.from(".service .card", {
@@ -95,7 +99,7 @@ const Service = new Swiper(".js-service-slider", {
   init: false,
   slidesPerView: 1,
   autoplay: {
-    delay: 10000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   pagination: {

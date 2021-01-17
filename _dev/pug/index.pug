@@ -15,14 +15,14 @@ block content
               span.separator
               .__txt
                 p= $i18n.index.intro.txt
-              a(href="#").b-btn.--fill.__btn= $i18n.index.intro.button
+              a(href="https://app.savetofuture.com" target="_blank").b-btn.--fill.__btn= $i18n.index.intro.button
                 +svgMono("arrow-right")
             .__img
               img(src="../img/content/index-intro.png", alt=$i18n.index.intro.title)
 
     //- img(src="../../img/svg-sprite/play.svg", alt="")
   section.b-section.--full
-    .b-service
+    .b-service#about
       .container
         .header-section
           h2.title-section= $i18n.index.service.title
@@ -46,7 +46,7 @@ block content
                       li.__txt=  txt
         footer.b-section-footer
           .btn-wrap
-            a(href="").b-btn.--outline= $i18n.index.service.btn
+            a(href="https://app.savetofuture.com" target="_blank").b-btn.--fill= $i18n.index.service.btn
 
   section.b-section.--full.--dark
     .b-cases
@@ -66,10 +66,10 @@ block content
                 img(src="../img/content/cases-" + (index + 1) + ".png" , alt= item.title)
         footer.b-section-footer
           .__txt= $i18n.index.cases.footer
-          a(href="").b-btn.--outline= $i18n.index.cases.button
+          a(href="./cases.html").b-btn.--outline= $i18n.index.cases.button
 
   section.b-section.--full
-    .b-work
+    .b-work#works
       .container
         .__wrap
           .header-section
@@ -92,7 +92,8 @@ block content
             h3.__title= $i18n.index.use.title
             span.separator
           .__txt= $i18n.index.use.txt
-          .b-btn.--fill.__btn= $i18n.index.use.button
+          a(href="https://app.savetofuture.com" target="_blank").b-btn.--fill.__btn= $i18n.index.use.button
+            +svgMono("arrow-right")
         .__img.--outer
           img(src="../img/content/footer-banner.png", alt=$i18n.index.use.title)
 //- Content page_______________________________________

@@ -36,7 +36,7 @@ const calc = () => {
   let price = 0;
   discount = getVol("discounts", time);
   price = size * time;
-  if (discount) price = (price / 100) * discount;
+  if (discount) price = price - price * (discount / 100);
   if (courier) price += courier;
   htmlPrice.innerText = "$" + price.toFixed(1);
   htmlDiscount.innerText = discount + "%";

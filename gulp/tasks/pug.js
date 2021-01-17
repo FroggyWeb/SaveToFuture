@@ -15,7 +15,10 @@ pugbem.b = true;
 
 const renderHtml = (onlyChanged) =>
   gulp
-    .src([config.src.templates + "/[^_]*.pug"])
+    .src([
+      config.src.templates + "/[^_]*.pug",
+      !config.src.templates + "/doc/**",
+    ])
 
     .pipe(plumber({ errorHandler: config.errorHandler }))
     .pipe(
@@ -36,33 +39,13 @@ const renderHtml = (onlyChanged) =>
         plugins: [pugbem],
       })
     )
-    // .pipe(pug({ pretty: true, plugins: [pugbem] }))
-    // .pipe(gulp.dest({ dest: "_dest", locales: "_dev/locales/*.*" }.i18n.dest));
     .pipe(gulp.dest(config.dest.html));
 
 const buildPug = () => renderHtml();
+
 const watch = () => () => {
   gulp.watch([config.src.templates + "/**/[^_]*.pug"], buildPug);
-
-  gulp.watch(
-    [config.src.templates + "/**/_*.pug", config.src.templates + "/**/*.pug"],
-    buildPug
-  );
 };
-
-// const pugLang = () => {
-//   var options = {
-//     i18n: {
-//       dest: "_dest",
-//       locales: "test/locales/*.*",
-//     },
-//     pretty: true,
-//   };
-//   return gulp
-//     .src("_dev/pug/*.pug")
-
-//     .pipe(gulp.dest(options.i18n.dest));
-// };
 
 module.exports.watch = watch;
 module.exports.build = buildPug;

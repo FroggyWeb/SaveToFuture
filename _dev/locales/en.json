@@ -6,23 +6,25 @@
     },
     "contacts": {
       "title": "Contacts",
-      "mail": "1111@gmail.com",
+      "mail": "support@savetofuture.com",
       "tel": "+ 000 00 000 000",
-      "post": "242733, Ryazan region, G. Spas-Klepiki, st. Kuibyshev, 42-22"
+      "post": "TIMESOFT, INC. registered at Delaware, US"
     },
     "soc": {
-      "twitter": "https:/",
-      "facebook": "https:/",
-      "youtube": "https:/"
+      "twitter": "https://twitter.com/savetofuture",
+      "LinkedIn": "https://www.linkedin.com/company/savetofuture/",
+      "facebook": "https://www.facebook.com/savetofuture",
+      "youtube": "https://www.youtube.com/channel/UCiHkqSUHfTiJV8K7NxsztRg/videos",
+      "telegram": "https://t.me/savetofuture"
     },
     "nav": {
       "Legal": {
         "title": "Legal",
         "link": [
-          { "name": "Terms & Conditions", "url": "terms.html" },
-          { "name": "Privacy Policy", "url": "privacy.html" },
-          { "name": "Disclaimer", "url": "disclaimer.html" },
-          { "name": "Cookies Policy", "url": "Cookies.html" }
+          { "name": "Privacy policy", "url": "privacy_policy.html" },
+          { "name": "Privacy Shield", "url": "privacy_shield_policy.html" },
+          { "name": "Website policy", "url": "website_policy.html" },
+          { "name": "Cookie policy ", "url": "cookie_policy.html" }
         ]
       },
       "company": {
@@ -121,8 +123,8 @@
       ]
     },
     "use": {
-      "title": "Deliver your data to the future safely and securely",
-      "txt": "More encrypted than cloud storage",
+      "title": "Use the SaveToFuture service right now",
+      "txt": "Create your first secure capsule",
       "button": "Get started"
     }
   },

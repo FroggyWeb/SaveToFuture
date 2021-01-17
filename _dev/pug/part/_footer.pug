@@ -22,11 +22,15 @@ footer.b-footer-page
 
       .__soc
         .b-soc
-          a(href=" #{$i18n.glob.soc.twitter}").__link
+          a(href= $i18n.glob.soc.twitter, target="_blank").__link
             +svgMono("soc-tw")
-          a(href=" #{$i18n.glob.soc.facebook}").__link
+          a(href= $i18n.glob.soc.facebook, target="_blank").__link
             +svgMono("soc-fb")
-          a(href=" #{$i18n.glob.soc.youtube}").__link
+          a(href=$i18n.glob.soc.LinkedIn, target="_blank").__link
+            +svgMono("soc-linkedin")
+          a(href= $i18n.glob.soc.youtube, target="_blank").__link
             +svgMono("soc-youtube")
+          a(href= $i18n.glob.soc.telegram, target="_blank").__link
+            +svgMono("soc-telegram")
 
       .copyright 	&copy; SaveToFuture <span id="copy-year">2020</span>. All rights reserved
