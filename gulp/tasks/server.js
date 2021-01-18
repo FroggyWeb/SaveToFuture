@@ -31,7 +31,7 @@ const build = (cb) => {
     notify: false,
     ghostMode: false,
     online: true,
-    tunnel: util.env.tunnel || null,
+    tunnel: true,
   });
   cb();
 };

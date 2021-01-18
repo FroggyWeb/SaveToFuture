@@ -16,23 +16,24 @@ function initService() {
   // pagination.eq(0).removeClass("swiper-pagination-bullet-active");
   // tlService.from(pagination, {stagger: 1})
   // Service.autoplay.stop();
-  pagination.each(function () {
-    let el = $(this).find(".pagination-icon__wrap");
-    let timer = $(this).find(".pagination-icon__timer");
-    tlService
-      .from(el, { opacity: 0, duration: 0.25 })
-      .to(el, { scale: 1.1, duration: 0.25 }, "-=.5")
-      .to(el, { scale: 1, duration: 0.25 })
-      .from(
-        timer,
-        {
-          scaleX: 0,
-          duration: 0.5,
-          transformOrigin: "left",
-        },
-        "-=1"
-      );
-  });
+  let el = ".service .pagination-icon__wrap";
+  let timer = ".service .pagination-icon__timer";
+  tlService
+    .from(el, { autoAlpha: 0, duration: 0.5, stagger: .2 })
+    .to(el, { autoAlpha: 1, scale: 1.1, duration: 0.5 })
+    .to(el, { scale: 1, duration: 0.5 })
+  tlService.from(
+      timer,
+      {
+        scaleX: 0,
+        duration: 0.25,
+        transformOrigin: "left",
+        stagger: .2
+      },
+      "-=.2"
+    );
+  // pagination.each(function () {
+  // });
 
   tlService.from(".service .card", {
     onComplete: () => {
@@ -54,22 +55,25 @@ function slideAnim() {
     .from(active.querySelector(".card__img"), {
       opacity: 0,
       rotateY: -180,
+      duration: 1,
     })
-    .from(active.querySelector(".card__title"), {
+  tlService.from(active.querySelector(".card__title"), {
       opacity: 0,
-    })
-    .from(
+      duration: 1,
+    }, "-=.5")
+  tlService.from(
       active.querySelector(".separator"),
       {
         scaleX: 0,
         transformOrigin: "left",
-      },
-      "-=1"
+         duration: 0.5,
+      }
     )
-    .from(active.querySelectorAll(".card__txt"), {
+  tlService.from(active.querySelectorAll(".card__txt"), {
       opacity: 0,
       stagger: 0.2,
-    });
+      duration: 0.5,
+    }, "-=.5");
 }
 
 Swiper.use([Pagination, EffectFade, Autoplay]);
@@ -152,3 +156,5 @@ ScrollTrigger.create({
   onEnter: () => initService(),
   onLeaveBack: (self) => self.disable(),
 });
+
+

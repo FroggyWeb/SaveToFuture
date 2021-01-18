@@ -6,7 +6,7 @@ const production =
   util.env.prod ||
   util.env._.indexOf("build") !== -1 ||
   false;
-const destPath = "doc";
+const destPath = "public";
 
 const config = {
   env: "development",
