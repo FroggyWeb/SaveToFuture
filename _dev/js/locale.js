@@ -15,8 +15,7 @@ if (!langList.includes(browserLang)) {
 }
 
 const redirect = (lang) => {
-  // if (urlLocale != lang) window.location.replace(`/${lang}/${urlPage}`);
-  if (urlLocale != lang) window.location.replace(`/public/${lang}/${urlPage}`); //temp for github
+  if (urlLocale != lang) window.location.replace(`/${lang}/${urlPage}`);
 };
 
 let changeLang = localStorage.getItem("locale") || browserLang;

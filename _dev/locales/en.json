@@ -21,10 +21,10 @@
       "Legal": {
         "title": "Legal",
         "link": [
-          { "name": "Privacy policy", "url": "privacy_policy.html" },
-          { "name": "Privacy Shield", "url": "privacy_shield_policy.html" },
-          { "name": "Website policy", "url": "website_policy.html" },
-          { "name": "Cookie policy ", "url": "cookie_policy.html" }
+          { "name": "Privacy policy", "url": "/privacy_policy.html" },
+          { "name": "Privacy Shield", "url": "/privacy_shield_policy.html" },
+          { "name": "Website policy", "url": "/website_policy.html" },
+          { "name": "Cookie policy ", "url": "/cookie_policy.html" }
         ]
       },
       "company": {
