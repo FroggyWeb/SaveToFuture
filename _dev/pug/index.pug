@@ -84,18 +84,19 @@ block content
                 .__img
                   img(src="../img/content/works-" + (index + 1) + ".png" , alt= item.txt)
 
-  section.b-section.--full
-    .container
-      .b-card
-        .__cnt
-          .__title-wrap
-            h3.__title= $i18n.index.use.title
-            span.separator
-          .__txt= $i18n.index.use.txt
-          a(href="https://app.savetofuture.com" target="_blank").b-btn.--fill.__btn= $i18n.index.use.button
-            +svgMono("arrow-right")
-        .__img.--outer
-          img(src="../img/content/footer-banner.png", alt=$i18n.index.use.title)
+  section.b-section
+    .b-index-use
+      .container
+        .b-card
+          .__cnt
+            .__title-wrap
+              h3.__title= $i18n.index.use.title
+              span.separator
+            .__txt= $i18n.index.use.txt
+            a(href="https://app.savetofuture.com" target="_blank").b-btn.--fill.__btn= $i18n.index.use.button
+              +svgMono("arrow-right")
+          .__img.--outer
+            img(src="../img/content/footer-banner.png", alt=$i18n.index.use.title)
 //- Content page_______________________________________
 block scripts
   script(src='../js/vendor.js')

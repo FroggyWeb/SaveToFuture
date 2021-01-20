@@ -9,7 +9,7 @@ const sections = document.querySelectorAll(".section");
 function goToSection(section, anim) {
   gsap.to(window, {
     scrollTo: { y: section, autoKill: false },
-    duration: 1,
+    duration: 0.5,
   });
 
   if (anim) {
@@ -28,12 +28,14 @@ sections.forEach((section) => {
   //   });
   // }
 
-  ScrollTrigger.create({
-    // markers: true,
-    trigger: section,
-    end: "bottom 70%",
-    start: "top 70%",
-    onEnter: () => goToSection(section, intoAnim),
-    // onEnterBack: () => goToSection(section),
-  });
+  // ScrollTrigger.create({
+  //   // markers: true,
+  //   trigger: section,
+  //   end: "bottom 70%",
+  //   start: "top 70%",
+  //   scrub: true,
+  //   toggleActions: "play complite none none",
+  //   onEnter: () => goToSection(section, intoAnim),
+  //   // onEnterBack: () => goToSection(section),
+  // });
 });

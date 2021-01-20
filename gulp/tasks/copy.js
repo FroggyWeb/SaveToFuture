@@ -13,11 +13,14 @@ const copyFonts = () =>
 
 // const copyPhp = () => gulp.src(config.src.php + '/*.*').pipe(gulp.dest(config.dest.php));
 
-// const copyJs = () => gulp.src(config.src.js + '/**/*.*').pipe(gulp.dest(config.dest.js));
+const copyFav = () =>
+  gulp
+    .src(config.src.root + "/fav/*.*")
+    .pipe(gulp.dest(config.dest.root + "/fav"));
 const copyJson = () =>
   gulp.src(config.src.json + "/*.*").pipe(gulp.dest(config.dest.json));
 
-const copyTask = () => gulp.parallel(copyRootfiles, copyFonts);
+const copyTask = () => gulp.parallel(copyRootfiles, copyFonts, copyFav);
 
 const watch = () => () => {
   gulp.watch(config.src.root + "/*.*", copyRootfiles);

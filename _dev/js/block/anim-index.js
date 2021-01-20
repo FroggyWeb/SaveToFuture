@@ -4,64 +4,136 @@ import { ScrollToPlugin, ScrollTrigger, CSSRulePlugin } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(CSSRulePlugin);
 
-const intro = gsap.timeline({
+const cardTl = gsap.timeline({
   defaults: {
     // children inherit these defaults
-    duration: .5,
+    duration: 0.5,
     ease: "power2.inOut",
   },
 });
 
-intro
-  .from(".header-page", { duration: 1, y: "-100%" })
+gsap.from(".header-page", { duration: 1, y: "-100%" });
 
+const headers = document.querySelectorAll(".header-section");
+headers.forEach((el) => {
+  gsap.from(el, {
+    autoAlpha: 0,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: el,
+      start: "top 50%",
+    },
+  });
+});
 
-// ScrollTrigger.create({
-//   trigger: ".card",
-//   // markers: true,
-//   start: "center center",
-//   onEnter: () => {
-//     intro.from(".card__title", { opacity: 0 })
-//     intro.from(".card .separator", {
-//       duration: .7,
-//       transformOrigin: "left",
-//       scaleX: 0,
-//     })
-//     intro.from(".card__txt", { autoAlpha: 0 })
-//     intro.from(".card__img", { duration: 1, autoAlpha: 0, rotateY: -180 })
-//     intro.from(".card__cnt .btn", { autoAlpha: 0 })
-//     intro.to(".card__cnt .btn", { duration: .25, autoAlpha: 1, rotateZ: 10 })
-//     intro.to(".card__cnt .btn", { duration: .25, autoAlpha: 1, rotateZ: 0 });
-//   },
-//   onLeaveBack: (self) => self.disable(),
-// });
+const cards = document.querySelectorAll(".cases .card");
+const intro = document.querySelector(".intro");
+const indexUse = document.querySelector(".index-use");
+const indexWork = document.querySelectorAll(".work-list__item");
 
-const cards = gsap.utils.toArray(".cases .card")
+function animCard(el) {
+  gsap.set(el, { opacity: 1 });
+  const btn = el.querySelector(".card__cnt .btn");
 
-cards.forEach( (el) => {
-   intro.from(el.querySelector(".card__title"), {
-     opacity: 0,
-     scrollTrigger: {
-        trigger: el,
-        start: "top 90%"
-      }
+  gsap
+    .timeline()
+    .from(el.querySelector(".card__title"), {
+      opacity: 0,
+      duration: 0.25,
     })
-    intro.from(el.querySelector(".card .separator"), {
-      duration: .7,
-      transformOrigin: "left",
-      scaleX: 0,
+    .from(
+      el.querySelector(".separator"),
+      {
+        duration: 0.5,
+        transformOrigin: "left",
+        scaleX: 0.5,
+      },
+      "-=.25"
+    )
+    .from(el.querySelector(".card__txt"), { opacity: 0, duration: 0.5 })
+    .from(
+      el.querySelector(".card__img"),
+      {
+        duration: 1,
+        opacity: 0,
+        rotateY: -180,
+      },
+      "-=1"
+    );
+
+  if (btn) {
+    cardTl
+      .from(btn, { duration: 0.25, opacity: 0 })
+      .to(btn, { duration: 0.25, opacity: 1, rotateZ: 10 })
+      .to(btn, { duration: 0.25, rotateZ: 0 });
+  }
+}
+
+function animWork(el) {
+  gsap.set(el, { opacity: 1 });
+  gsap
+    .timeline()
+    .from(el.querySelector(".work-list__counter"), {
+      opacity: 0,
+      scale: 1.5,
+      duration: 0.75,
     })
-    intro.from(el.querySelector(".card__txt"), { opacity: 0 })
-    intro.from(el.querySelector(".card__img"), { duration: 1, opacity: 0, rotateY: -180 })
-    intro.from(el.querySelector(".card__cnt .btn"), { opacity: 0 })
-})
+    .from(el.querySelector(".work-list__border"), {
+      scaleY: 0,
+    })
+    .from(
+      el.querySelector(".work-list__txt"),
+      {
+        opacity: 0,
+      },
+      "-=1"
+    )
+    .from(
+      el.querySelector(".work-list__img"),
+      {
+        opacity: 0,
+      },
+      "-=.1"
+    );
+}
 
+gsap.to(intro, {
+  scrollTrigger: {
+    toggleActions: "play complite none none",
+    trigger: intro,
+    onEnter: () => animCard(intro),
+    onLeaveBack: (self) => self.disable(),
+  },
+});
 
-  // headers.forEach( (el)=> {
-  // gsap.to(el, {
-  // autoAlpha: 1,
-  // yPercent: 0,
-  // scrollTrigger: {
-  //   trigger: el,
-  //   start: "top 50%"
-  // }
+gsap.to(indexUse, {
+  scrollTrigger: {
+    toggleActions: "play complite none none",
+    trigger: indexUse,
+    onEnter: () => animCard(indexUse),
+    onLeaveBack: (self) => self.disable(),
+  },
+});
+
+cards.forEach((el) => {
+  gsap.set(el, { opacity: 0 });
+  ScrollTrigger.create({
+    trigger: el,
+    start: "top 70%",
+    toggleActions: "play complite none none",
+    onEnter: () => animCard(el),
+    onLeaveBack: (self) => self.disable(),
+  });
+});
+
+indexWork.forEach((el) => {
+  gsap.set(el, { opacity: 0 });
+
+  ScrollTrigger.create({
+    trigger: el,
+    start: "top 70%",
+    toggleActions: "play complite none none",
+    onEnter: () => animWork(el),
+    onLeaveBack: (self) => self.disable(),
+  });
+});
